@@ -59,5 +59,6 @@ export interface ReaderSettings {
   fontSize: number
   showPinyin: boolean
   autoFollow: boolean
+  autoNextChapter: boolean
   playbackRate: number
 }

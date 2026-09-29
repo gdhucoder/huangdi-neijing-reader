@@ -14,7 +14,7 @@ import { ErrorScreen, LoadingScreen } from './HomePage'
 
 export function ChapterPage() {
   const { chapterId } = useParams(); const navigate = useNavigate(); const location = useLocation(); const [book, setBook] = useState<ReaderBook | null>(null); const [error, setError] = useState<string | null>(null); const [activeSegmentId, setActiveSegmentId] = useState<string | null>(null); const [settingsOpen, setSettingsOpen] = useState(false); const [directoryOpen, setDirectoryOpen] = useState(false); const [pausedFollow, setPausedFollow] = useState(false)
-  const { fontSize, showPinyin, autoFollow, playbackRate } = useSettingsStore(); const lastSegment = useRef<ReaderSegment | null>(null); const lastPosition = useRef(0)
+  const { fontSize, showPinyin, autoFollow, autoNextChapter, playbackRate } = useSettingsStore(); const lastSegment = useRef<ReaderSegment | null>(null); const lastPosition = useRef(0)
   useEffect(() => { getReaderBook().then(setBook).catch((reason: unknown) => { console.error(reason); setError(reason instanceof Error ? reason.message : '内容包无法加载。') }) }, [])
   const chapter = book?.chapters.find((candidate) => candidate.id === chapterId)
   const persist = useCallback((segment: ReaderSegment | null, positionMs: number) => { if (!book || !chapter) return; const target = segment ?? lastSegment.current; if (!target) return; lastSegment.current = target; lastPosition.current = positionMs; saveProgress({ bookId: book.id, chapterId: chapter.id, segmentId: target.id, audioPositionMs: positionMs }) }, [book, chapter])
@@ -22,8 +22,24 @@ export function ChapterPage() {
   const audio = useChapterAudio(chapter ?? emptyChapter, playbackRate, onActive, (position) => persist(null, position))
   const activeSegment = chapter?.segments.find((segment) => segment.id === activeSegmentId)
   const activeCharacterIndex = activeSegment ? findActiveCharacterIndex(activeSegment.pronunciationTimings, audio.positionMs - (activeSegment.startMs ?? 0)) : -1
+  const routeState = location.state as { restoreProgress?: boolean; autoPlay?: boolean } | null
+  const nextChapter = book?.chapters.find((candidate) => candidate.order > (chapter?.order ?? Number.MAX_SAFE_INTEGER))
   useEffect(() => { setActiveSegmentId(null); setPausedFollow(false); lastSegment.current = null; lastPosition.current = 0; window.scrollTo({ top: 0, behavior: 'auto' }) }, [chapter?.id])
-  useEffect(() => { if (!chapter || !(location.state as { restoreProgress?: boolean } | null)?.restoreProgress) return; const progress = readProgress(); const segment = progress?.chapterId === chapter.id ? chapter.segments.find((item) => item.id === progress.segmentId) : undefined; if (!segment) return; lastSegment.current = segment; lastPosition.current = progress!.audioPositionMs; setActiveSegmentId(segment.id); requestAnimationFrame(() => document.getElementById(`segment-${segment.id}`)?.scrollIntoView({ block: 'center' })) }, [chapter, location.state])
+  useEffect(() => { if (!chapter || !routeState?.restoreProgress) return; const progress = readProgress(); const segment = progress?.chapterId === chapter.id ? chapter.segments.find((item) => item.id === progress.segmentId) : undefined; if (!segment) return; lastSegment.current = segment; lastPosition.current = progress!.audioPositionMs; setActiveSegmentId(segment.id); requestAnimationFrame(() => document.getElementById(`segment-${segment.id}`)?.scrollIntoView({ block: 'center' })) }, [chapter, routeState?.restoreProgress])
+  useEffect(() => {
+    if (!chapter || !routeState?.autoPlay || !audio.playable.length) return
+    const element = audio.audioRef.current
+    if (!element) return
+    let cancelled = false
+    const start = () => {
+      if (cancelled) return
+      void audio.seekAndPlay(audio.playable[0])
+      navigate(location.pathname, { replace: true, state: null })
+    }
+    if (element.readyState >= 1) start()
+    else element.addEventListener('loadedmetadata', start, { once: true })
+    return () => { cancelled = true; element.removeEventListener('loadedmetadata', start) }
+  }, [chapter?.id, routeState?.autoPlay, audio.playable.length, location.pathname, navigate])
   useEffect(() => {
     // Auto-follow uses scrollIntoView, which also emits scroll events. Listening
     // to scroll itself therefore immediately cancelled following after the
@@ -51,6 +67,7 @@ export function ChapterPage() {
   const canPlay = Boolean(chapter.audioUrl && chapter.timelineValid && audio.playable.length)
   const returnToAudio = () => { if (!activeSegmentId) return; setPausedFollow(false); document.getElementById(activeCharacterIndex >= 0 ? `character-${activeSegmentId}-${activeCharacterIndex}` : `segment-${activeSegmentId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }) }
   const selectChapter = (nextChapterId: string) => { setDirectoryOpen(false); if (nextChapterId !== chapter.id) navigate(`/chapter/${nextChapterId}`) }
-  return <main className="chapter-page"><header className="reader-header"><button className="icon-button" onClick={() => navigate('/')} aria-label="返回目录">‹</button><button className="chapter-title-button" onClick={() => setDirectoryOpen(true)} aria-label="打开章节目录"><p className="eyebrow">{chapter.collection}</p><h1>{chapter.title}<span aria-hidden="true">⌄</span></h1></button><button className="type-button" onClick={() => setSettingsOpen(true)} aria-label="打开阅读设置">A<span>a</span></button></header><div className="reader-main">{!chapter.timelineValid && <p className="inline-notice">此篇时间轴有误，正文仍可阅读，但无法定位朗读。</p>}{audio.audioError && <p className="inline-notice">{audio.audioError}</p>}<ReaderText chapter={chapter} activeSegmentId={activeSegmentId} activeCharacterIndex={activeCharacterIndex} showPinyin={showPinyin} fontSize={fontSize} onPlay={audio.seekAndPlay} />{pausedFollow && activeSegmentId && <button className="follow-button" onClick={returnToAudio}>回到朗读位置</button>}</div><AudioPlayer audioRef={audio.audioRef} audioUrl={chapter.audioUrl} title={chapter.title} isPlaying={audio.isPlaying} positionMs={audio.positionMs} durationMs={chapter.audioDurationMs} rate={playbackRate} canPlay={canPlay} onToggle={audio.toggle} onSkip={audio.skip} onTimeUpdate={audio.onTimeUpdate} onPlay={audio.onPlay} onPause={audio.onPause} onEnded={audio.onEnded} onError={audio.onError} /><ChapterDirectory open={directoryOpen} chapters={book.chapters} currentChapterId={chapter.id} onClose={() => setDirectoryOpen(false)} onSelect={selectChapter} /><ReaderSettings open={settingsOpen} onClose={() => setSettingsOpen(false)} /></main>
+  const handleEnded = () => { audio.onEnded(); if (autoNextChapter && nextChapter) navigate(`/chapter/${nextChapter.id}`, { state: { autoPlay: true } }) }
+  return <main className="chapter-page"><header className="reader-header"><button className="icon-button" onClick={() => navigate('/')} aria-label="返回目录">‹</button><button className="chapter-title-button" onClick={() => setDirectoryOpen(true)} aria-label="打开章节目录"><p className="eyebrow">{chapter.collection}</p><h1>{chapter.title}<span aria-hidden="true">⌄</span></h1></button><button className="type-button" onClick={() => setSettingsOpen(true)} aria-label="打开阅读设置">A<span>a</span></button></header><div className="reader-main">{!chapter.timelineValid && <p className="inline-notice">此篇时间轴有误，正文仍可阅读，但无法定位朗读。</p>}{audio.audioError && <p className="inline-notice">{audio.audioError}</p>}<ReaderText chapter={chapter} activeSegmentId={activeSegmentId} activeCharacterIndex={activeCharacterIndex} showPinyin={showPinyin} fontSize={fontSize} onPlay={audio.seekAndPlay} />{pausedFollow && activeSegmentId && <button className="follow-button" onClick={returnToAudio}>回到朗读位置</button>}</div><AudioPlayer audioRef={audio.audioRef} audioUrl={chapter.audioUrl} title={chapter.title} isPlaying={audio.isPlaying} positionMs={audio.positionMs} durationMs={chapter.audioDurationMs} rate={playbackRate} canPlay={canPlay} onToggle={audio.toggle} onSkip={audio.skip} onTimeUpdate={audio.onTimeUpdate} onPlay={audio.onPlay} onPause={audio.onPause} onEnded={handleEnded} onError={audio.onError} /><ChapterDirectory open={directoryOpen} chapters={book.chapters} currentChapterId={chapter.id} onClose={() => setDirectoryOpen(false)} onSelect={selectChapter} /><ReaderSettings open={settingsOpen} onClose={() => setSettingsOpen(false)} /></main>
 }
 const emptyChapter: ReaderChapter = { id: '', order: 0, title: '', timelineValid: false, segments: [] }
