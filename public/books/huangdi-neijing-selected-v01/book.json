@@ -1,0 +1,56 @@
+{
+  "id": "01a0eb40-7ac3-7647-9816-755653dc7bf5",
+  "title": "huangdi-neijing-selected-v01",
+  "author": null,
+  "dynasty": null,
+  "edition": null,
+  "language": "zh-CN",
+  "reading_mode": "modern_standard_mandarin",
+  "audio": {
+    "format": "mp3"
+  },
+  "chapters": [
+    {
+      "id": "01a0eb40-7ac3-7647-9816-7557bfc219e4",
+      "order": 1,
+      "title": "上古天真论",
+      "content": "chapters/chapter-001.json",
+      "audio": "audio/chapter-001.mp3"
+    },
+    {
+      "id": "01a0eb40-7ae2-71d3-b238-bc3129437d62",
+      "order": 2,
+      "title": "四气调神大论",
+      "content": "chapters/chapter-002.json",
+      "audio": "audio/chapter-002.mp3"
+    },
+    {
+      "id": "01a0eb40-7af4-7028-a7e0-419e7634c64f",
+      "order": 3,
+      "title": "生气通天论",
+      "content": "chapters/chapter-003.json",
+      "audio": "audio/chapter-003.mp3"
+    },
+    {
+      "id": "01a0eb40-7b0d-7364-8b31-d3be46d63101",
+      "order": 4,
+      "title": "灵兰秘典论",
+      "content": "chapters/chapter-004.json",
+      "audio": "audio/chapter-004.mp3"
+    },
+    {
+      "id": "01a0eb40-7b16-71f9-bf86-f9780dad0d3a",
+      "order": 5,
+      "title": "本神",
+      "content": "chapters/chapter-005.json",
+      "audio": "audio/chapter-005.mp3"
+    },
+    {
+      "id": "01a0eb40-7b28-71e9-8b50-6df0297156e0",
+      "order": 6,
+      "title": "天年",
+      "content": "chapters/chapter-006.json",
+      "audio": "audio/chapter-006.mp3"
+    }
+  ]
+}

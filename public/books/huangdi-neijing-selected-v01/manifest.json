@@ -1,0 +1,10 @@
+{
+  "format": "ancient-medical-publication-bundle",
+  "format_version": "1.0",
+  "generator": {
+    "name": "AncientMedicalTTS",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-09-29T03:45:46.53245Z",
+  "book": "book.json"
+}
