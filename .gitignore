@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local Sites metadata; do not publish internal project identity to GitHub.
+.openai/hosting.json

@@ -8,7 +8,8 @@ export function ensureSafeRelativePath(path: string): string {
 
 export function contentBaseUrl(): string {
   const configured = import.meta.env.VITE_CONTENT_BASE_URL?.trim()
-  const base = configured || '/books/huangdi-neijing-selected/'
+  const appBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`
+  const base = configured || `${appBase}books/huangdi-neijing/`
   return base.endsWith('/') ? base : `${base}/`
 }
 

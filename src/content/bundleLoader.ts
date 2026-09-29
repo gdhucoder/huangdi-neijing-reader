@@ -1,11 +1,11 @@
 import { contentUrl, ensureSafeRelativePath } from '../utils/paths'
 
-export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; src?: string; path?: string }> }
-export interface RawBook { id: string; title: string; subtitle?: string; description?: string; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: Array<{ id: string; order?: number; collection?: string; title?: string; subtitle?: string; src?: string; path?: string }> }
+export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; src?: string; path?: string; content?: string }> }
+export interface RawBook { id: string; title: string; subtitle?: string; description?: string; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: Array<{ id: string; order?: number; collection?: string; title?: string; subtitle?: string; src?: string; path?: string; content?: string; audio?: string }> }
 export interface RawChapter {
   id: string; order?: number; collection?: string; title: string; subtitle?: string
   audio?: { src?: string; duration_ms?: number; durationMs?: number }
-  segments: Array<{ id: string; order?: number; text: string; speakable?: boolean; start_ms?: number | null; end_ms?: number | null; startMs?: number | null; endMs?: number | null; translation?: string | null; pronunciation?: Array<{ text: string; pinyin: string }>; pronunciation_tokens?: Array<{ text: string; pinyin: string }> }>
+  segments: Array<{ id: string; order?: number; text: string; speakable?: boolean; speak_enabled?: boolean; start_ms?: number | null; end_ms?: number | null; startMs?: number | null; endMs?: number | null; translation?: string | null; pronunciation?: { tokens?: Array<{ text: string; pinyin?: string | null; confirmed_pinyin?: string | null; reference_pinyin?: string | null }> } | Array<{ text: string; pinyin?: string | null }>; pronunciation_tokens?: Array<{ text: string; pinyin: string }> }>
 }
 export interface RawBundle { manifest: RawManifest; book: RawBook; chapters: RawChapter[] }
 
@@ -28,6 +28,6 @@ export async function loadRawBundle(): Promise<RawBundle> {
   const book = await fetchJson<RawBook>(resourcePath(manifest.book))
   const entries = book.chapters ?? manifest.chapters
   if (!entries?.length) throw new Error('内容包没有可阅读的篇章。')
-  const chapters = await Promise.all(entries.map((chapter) => fetchJson<RawChapter>(resourcePath(chapter))))
+  const chapters = await Promise.all(entries.map((chapter) => fetchJson<RawChapter>(resourcePath(chapter.content ?? chapter.src ?? chapter.path ?? ''))))
   return { manifest, book, chapters }
 }

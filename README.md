@@ -15,13 +15,13 @@ pnpm test
 pnpm build
 ```
 
-默认读取 `public/books/huangdi-neijing-selected/`。生产环境可设置 `VITE_CONTENT_BASE_URL`，例如 `https://content.example.com/huangdi-neijing-selected/`；内容路径必须保持相对路径，且不能使用 `..`。
+默认读取 `public/books/huangdi-neijing/`；生产环境可设置 `VITE_CONTENT_BASE_URL`，例如 `https://content.example.com/huangdi-neijing/`。内容路径必须保持相对路径，且不能使用 `..`。
 
 ## Publication Bundle v1
 
 支持 `format: ancient-medical-publication-bundle` 和 `format_version: 1.0`。加载顺序为 `manifest.json → book.json → chapters/*.json → audio/*.mp3`。UI 先通过 `bundleLoader` 获取原始 JSON，再由 `bundleAdapter` 转成 Reader Domain Model，界面组件不会直接依赖原始 Bundle 字段。
 
-仓库附带的小型 Bundle v1 fixture 仅供开发与交互验证；音频是静音占位，必须替换为 AncientMedicalTTS 导出的正式《黄帝内经精选》Bundle 才能作为正式内容发布。
+当前默认内容已经切换为 AncientMedicalTTS 导出的 12 篇正式 Bundle；仓库中保留的小型 Bundle fixture 仅供开发测试，不是默认内容。
 
 ## PWA 与部署
 
