@@ -12,6 +12,12 @@ import { useSettingsStore } from '../stores/settingsStore'
 import type { ReaderBook, ReaderChapter, ReaderSegment } from '../types/reader'
 import { ErrorScreen, LoadingScreen } from './HomePage'
 
+function scrollToFollowPosition(target: HTMLElement, behavior: ScrollBehavior = 'smooth') {
+  const topAnchor = Math.max(112, Math.min(window.innerHeight * 0.34, window.innerHeight - 220))
+  const targetTop = target.getBoundingClientRect().top + window.scrollY
+  window.scrollTo({ top: Math.max(0, targetTop - topAnchor), behavior })
+}
+
 export function ChapterPage() {
   const { chapterId } = useParams(); const navigate = useNavigate(); const location = useLocation(); const [book, setBook] = useState<ReaderBook | null>(null); const [error, setError] = useState<string | null>(null); const [activeSegmentId, setActiveSegmentId] = useState<string | null>(null); const [settingsOpen, setSettingsOpen] = useState(false); const [directoryOpen, setDirectoryOpen] = useState(false); const [pausedFollow, setPausedFollow] = useState(false)
   const { fontSize, showPinyin, autoFollow, autoNextChapter, playbackRate } = useSettingsStore(); const lastSegment = useRef<ReaderSegment | null>(null); const lastPosition = useRef(0); const lastFollowSegmentId = useRef<string | null>(null)
@@ -25,7 +31,7 @@ export function ChapterPage() {
   const routeState = location.state as { restoreProgress?: boolean; autoPlay?: boolean } | null
   const nextChapter = book?.chapters.find((candidate) => candidate.order > (chapter?.order ?? Number.MAX_SAFE_INTEGER))
   useEffect(() => { setActiveSegmentId(null); setPausedFollow(false); lastSegment.current = null; lastPosition.current = 0; lastFollowSegmentId.current = null; window.scrollTo({ top: 0, behavior: 'auto' }) }, [chapter?.id])
-  useEffect(() => { if (!chapter || !routeState?.restoreProgress) return; const progress = readProgress(); const segment = progress?.chapterId === chapter.id ? chapter.segments.find((item) => item.id === progress.segmentId) : undefined; if (!segment) return; lastSegment.current = segment; lastPosition.current = progress!.audioPositionMs; setActiveSegmentId(segment.id); requestAnimationFrame(() => document.getElementById(`segment-${segment.id}`)?.scrollIntoView({ block: 'center' })) }, [chapter, routeState?.restoreProgress])
+  useEffect(() => { if (!chapter || !routeState?.restoreProgress) return; const progress = readProgress(); const segment = progress?.chapterId === chapter.id ? chapter.segments.find((item) => item.id === progress.segmentId) : undefined; if (!segment) return; lastSegment.current = segment; lastPosition.current = progress!.audioPositionMs; setActiveSegmentId(segment.id); requestAnimationFrame(() => { const target = document.getElementById(`segment-${segment.id}`); if (target) scrollToFollowPosition(target, 'auto') }) }, [chapter, routeState?.restoreProgress])
   useEffect(() => {
     if (!chapter || !routeState?.autoPlay || !audio.playable.length) return
     const element = audio.audioRef.current
@@ -75,11 +81,11 @@ export function ChapterPage() {
     // Always bring a newly reached segment into view. Within the same segment
     // we keep the softer guard-band behaviour so the page does not constantly
     // move for every character.
-    if (segmentChanged || box.top < topGuard || box.bottom > bottomGuard) target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    if (segmentChanged || box.top < topGuard || box.bottom > bottomGuard) scrollToFollowPosition(target)
   }, [activeSegmentId, activeCharacterIndex, autoFollow, pausedFollow])
   if (error) return <ErrorScreen message={error} />; if (!book) return <LoadingScreen />; if (!chapter) return <ErrorScreen message="未找到这一篇。" />
   const canPlay = Boolean(chapter.audioUrl && chapter.timelineValid && audio.playable.length)
-  const returnToAudio = () => { if (!activeSegmentId) return; setPausedFollow(false); document.getElementById(activeCharacterIndex >= 0 ? `character-${activeSegmentId}-${activeCharacterIndex}` : `segment-${activeSegmentId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }) }
+  const returnToAudio = () => { if (!activeSegmentId) return; setPausedFollow(false); const target = document.getElementById(activeCharacterIndex >= 0 ? `character-${activeSegmentId}-${activeCharacterIndex}` : `segment-${activeSegmentId}`); if (target) scrollToFollowPosition(target) }
   const selectChapter = (nextChapterId: string) => { setDirectoryOpen(false); if (nextChapterId !== chapter.id) navigate(`/chapter/${nextChapterId}`) }
   const handleEnded = () => { audio.onEnded(); if (autoNextChapter && nextChapter) navigate(`/chapter/${nextChapter.id}`, { state: { autoPlay: true } }) }
   return <main className="chapter-page"><header className="reader-header"><button className="icon-button" onClick={() => navigate('/')} aria-label="返回目录">‹</button><button className="chapter-title-button" onClick={() => setDirectoryOpen(true)} aria-label="打开章节目录"><p className="eyebrow">{chapter.collection}</p><h1>{chapter.title}<span aria-hidden="true">⌄</span></h1></button><button className="type-button" onClick={() => setSettingsOpen(true)} aria-label="打开阅读设置">A<span>a</span></button></header><div className="reader-main">{!chapter.timelineValid && <p className="inline-notice">此篇时间轴有误，正文仍可阅读，但无法定位朗读。</p>}{audio.audioError && <p className="inline-notice">{audio.audioError}</p>}<ReaderText chapter={chapter} activeSegmentId={activeSegmentId} activeCharacterIndex={activeCharacterIndex} showPinyin={showPinyin} fontSize={fontSize} onPlay={audio.seekAndPlay} />{pausedFollow && activeSegmentId && <button className="follow-button" onClick={returnToAudio}>回到朗读位置</button>}</div><AudioPlayer audioRef={audio.audioRef} audioUrl={chapter.audioUrl} title={chapter.title} isPlaying={audio.isPlaying} positionMs={audio.positionMs} durationMs={chapter.audioDurationMs} rate={playbackRate} canPlay={canPlay} onToggle={audio.toggle} onSkip={audio.skip} onTimeUpdate={audio.onTimeUpdate} onPlay={audio.onPlay} onPause={audio.onPause} onEnded={handleEnded} onError={audio.onError} /><ChapterDirectory open={directoryOpen} chapters={book.chapters} currentChapterId={chapter.id} onClose={() => setDirectoryOpen(false)} onSelect={selectChapter} /><ReaderSettings open={settingsOpen} onClose={() => setSettingsOpen(false)} /></main>
