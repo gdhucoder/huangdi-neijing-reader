@@ -5,7 +5,7 @@ export interface RawBook { id: string; title: string; subtitle?: string; descrip
 export interface RawChapter {
   id: string; order?: number; collection?: string; title: string; subtitle?: string
   audio?: { src?: string; duration_ms?: number; durationMs?: number }
-  segments: Array<{ id: string; order?: number; text: string; speakable?: boolean; speak_enabled?: boolean; start_ms?: number | null; end_ms?: number | null; startMs?: number | null; endMs?: number | null; translation?: string | null; pronunciation?: { tokens?: Array<{ text: string; pinyin?: string | null; confirmed_pinyin?: string | null; reference_pinyin?: string | null }> } | Array<{ text: string; pinyin?: string | null }>; pronunciation_tokens?: Array<{ text: string; pinyin: string }> }>
+  segments: Array<{ id: string; order?: number; text: string; speakable?: boolean; speak_enabled?: boolean; start_ms?: number | null; end_ms?: number | null; startMs?: number | null; endMs?: number | null; translation?: string | null; pronunciation?: { tokens?: Array<{ text: string; pinyin?: string | null; confirmed_pinyin?: string | null; reference_pinyin?: string | null }>; tts_actual?: Array<{ text: string; pinyin?: string | null; begin_ms: number; end_ms: number }> } | Array<{ text: string; pinyin?: string | null }>; pronunciation_tokens?: Array<{ text: string; pinyin: string }> }>
 }
 export interface RawBundle { manifest: RawManifest; book: RawBook; chapters: RawChapter[] }
 

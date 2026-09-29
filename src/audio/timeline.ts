@@ -1,4 +1,4 @@
-import type { ReaderSegment } from '../types/reader'
+import type { PronunciationTiming, ReaderSegment } from '../types/reader'
 export function isValidTimeline(segments: ReaderSegment[]): boolean {
   let previousEnd = -1
   for (const segment of segments) {
@@ -14,4 +14,21 @@ export function findActiveSegmentIndex(segments: ReaderSegment[], currentMs: num
   let low = 0; let high = segments.length - 1
   while (low <= high) { const middle = Math.floor((low + high) / 2); const segment = segments[middle]; if (segment.startMs === null || segment.endMs === null) return -1; if (currentMs < segment.startMs) high = middle - 1; else if (currentMs >= segment.endMs) low = middle + 1; else return middle }
   return -1
+}
+
+export function findActiveCharacterIndex(timings: PronunciationTiming[] | undefined, currentMs: number): number {
+  if (!timings?.length) return -1
+  if (currentMs <= timings[0].startMs) return 0
+  const lastIndex = timings.length - 1
+  if (currentMs >= timings[lastIndex].endMs) return lastIndex
+  let low = 0
+  let high = lastIndex
+  while (low <= high) {
+    const middle = Math.floor((low + high) / 2)
+    const timing = timings[middle]
+    if (currentMs < timing.startMs) high = middle - 1
+    else if (currentMs >= timing.endMs) low = middle + 1
+    else return middle
+  }
+  return Math.max(0, Math.min(lastIndex, low))
 }

@@ -21,6 +21,12 @@ export function numericPinyinToToneMarks(value: string): string {
   return `${syllable.slice(0, index)}${marks[tone - 1]}${syllable.slice(index + 1)}`
 }
 
+function isPunctuationToken(value: string): boolean {
+  // Pronunciation data may contain any Chinese punctuation (and spaces), not
+  // only the small set used by the first demo bundle.
+  return /^[\p{P}\p{S}\s]+$/u.test(value)
+}
+
 export function validPronunciation(tokens: PronunciationToken[] | undefined, text: string): boolean {
-  return Boolean(tokens?.length) && tokens!.map((token) => token.text).join('') === text && tokens!.every((token) => token.text.length > 0 && (isNumericPinyin(token.pinyin) || (/^[，。；：、？！“”]$/u.test(token.text) && token.pinyin === '')))
+  return Boolean(tokens?.length) && tokens!.map((token) => token.text).join('') === text && tokens!.every((token) => token.text.length > 0 && (isNumericPinyin(token.pinyin) || (isPunctuationToken(token.text) && token.pinyin === '')))
 }

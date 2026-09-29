@@ -3,6 +3,12 @@ export interface PronunciationToken {
   pinyin: string
 }
 
+export interface PronunciationTiming {
+  text: string
+  startMs: number
+  endMs: number
+}
+
 export interface ReaderSegment {
   id: string
   order: number
@@ -12,6 +18,7 @@ export interface ReaderSegment {
   endMs: number | null
   translation?: string
   pronunciationTokens?: PronunciationToken[]
+  pronunciationTimings?: PronunciationTiming[]
 }
 
 export interface ReaderChapter {

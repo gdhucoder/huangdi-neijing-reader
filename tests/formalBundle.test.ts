@@ -3,6 +3,7 @@ import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { adaptBundle } from '../src/content/bundleAdapter'
 import type { RawBundle } from '../src/content/bundleLoader'
+import { validPronunciation } from '../src/utils/pinyin'
 
 describe('formal AncientMedicalTTS bundle', () => {
   it('adapts the imported twelve-chapter publication without changing its files', () => {
@@ -15,5 +16,7 @@ describe('formal AncientMedicalTTS bundle', () => {
     expect(adapted.chapters.every((chapter) => chapter.timelineValid && chapter.audioUrl?.includes('/books/huangdi-neijing/audio/'))).toBe(true)
     expect(adapted.chapters[0].segments.length).toBeGreaterThan(0)
     expect(adapted.chapters[0].segments[0].pronunciationTokens?.[0]).toMatchObject({ text: '上', pinyin: 'shang4' })
+    expect(adapted.chapters[0].segments[0].pronunciationTimings?.[0]).toMatchObject({ text: '上', startMs: 34 })
+    expect(adapted.chapters.every((chapter) => chapter.segments.every((segment) => validPronunciation(segment.pronunciationTokens, segment.text)))).toBe(true)
   })
 })
