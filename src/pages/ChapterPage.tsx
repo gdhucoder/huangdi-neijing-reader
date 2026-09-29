@@ -14,7 +14,7 @@ import { ErrorScreen, LoadingScreen } from './HomePage'
 
 export function ChapterPage() {
   const { chapterId } = useParams(); const navigate = useNavigate(); const location = useLocation(); const [book, setBook] = useState<ReaderBook | null>(null); const [error, setError] = useState<string | null>(null); const [activeSegmentId, setActiveSegmentId] = useState<string | null>(null); const [settingsOpen, setSettingsOpen] = useState(false); const [directoryOpen, setDirectoryOpen] = useState(false); const [pausedFollow, setPausedFollow] = useState(false)
-  const { fontSize, showPinyin, autoFollow, autoNextChapter, playbackRate } = useSettingsStore(); const lastSegment = useRef<ReaderSegment | null>(null); const lastPosition = useRef(0)
+  const { fontSize, showPinyin, autoFollow, autoNextChapter, playbackRate } = useSettingsStore(); const lastSegment = useRef<ReaderSegment | null>(null); const lastPosition = useRef(0); const lastFollowSegmentId = useRef<string | null>(null)
   useEffect(() => { getReaderBook().then(setBook).catch((reason: unknown) => { console.error(reason); setError(reason instanceof Error ? reason.message : '内容包无法加载。') }) }, [])
   const chapter = book?.chapters.find((candidate) => candidate.id === chapterId)
   const persist = useCallback((segment: ReaderSegment | null, positionMs: number) => { if (!book || !chapter) return; const target = segment ?? lastSegment.current; if (!target) return; lastSegment.current = target; lastPosition.current = positionMs; saveProgress({ bookId: book.id, chapterId: chapter.id, segmentId: target.id, audioPositionMs: positionMs }) }, [book, chapter])
@@ -24,7 +24,7 @@ export function ChapterPage() {
   const activeCharacterIndex = activeSegment ? findActiveCharacterIndex(activeSegment.pronunciationTimings, audio.positionMs - (activeSegment.startMs ?? 0)) : -1
   const routeState = location.state as { restoreProgress?: boolean; autoPlay?: boolean } | null
   const nextChapter = book?.chapters.find((candidate) => candidate.order > (chapter?.order ?? Number.MAX_SAFE_INTEGER))
-  useEffect(() => { setActiveSegmentId(null); setPausedFollow(false); lastSegment.current = null; lastPosition.current = 0; window.scrollTo({ top: 0, behavior: 'auto' }) }, [chapter?.id])
+  useEffect(() => { setActiveSegmentId(null); setPausedFollow(false); lastSegment.current = null; lastPosition.current = 0; lastFollowSegmentId.current = null; window.scrollTo({ top: 0, behavior: 'auto' }) }, [chapter?.id])
   useEffect(() => { if (!chapter || !routeState?.restoreProgress) return; const progress = readProgress(); const segment = progress?.chapterId === chapter.id ? chapter.segments.find((item) => item.id === progress.segmentId) : undefined; if (!segment) return; lastSegment.current = segment; lastPosition.current = progress!.audioPositionMs; setActiveSegmentId(segment.id); requestAnimationFrame(() => document.getElementById(`segment-${segment.id}`)?.scrollIntoView({ block: 'center' })) }, [chapter, routeState?.restoreProgress])
   useEffect(() => {
     if (!chapter || !routeState?.autoPlay || !audio.playable.length) return
@@ -55,13 +55,27 @@ export function ChapterPage() {
   }, [])
   useEffect(() => { const onHidden = () => { if (document.visibilityState === 'hidden') persist(null, lastPosition.current) }; document.addEventListener('visibilitychange', onHidden); return () => { document.removeEventListener('visibilitychange', onHidden); persist(null, lastPosition.current) } }, [persist])
   useEffect(() => {
+    // Re-enabling the setting should also resume following after a manual
+    // scroll paused it. Clearing the remembered segment makes the current
+    // reading position recenter immediately.
+    if (autoFollow) {
+      setPausedFollow(false)
+      lastFollowSegmentId.current = null
+    }
+  }, [autoFollow])
+  useEffect(() => {
     if (!activeSegmentId || !autoFollow || pausedFollow) return
     const target = document.getElementById(activeCharacterIndex >= 0 ? `character-${activeSegmentId}-${activeCharacterIndex}` : `segment-${activeSegmentId}`)
     if (!target) return
+    const segmentChanged = lastFollowSegmentId.current !== activeSegmentId
+    lastFollowSegmentId.current = activeSegmentId
     const box = target.getBoundingClientRect()
     const topGuard = 96
     const bottomGuard = window.innerHeight - 180
-    if (box.top < topGuard || box.bottom > bottomGuard) target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    // Always bring a newly reached segment into view. Within the same segment
+    // we keep the softer guard-band behaviour so the page does not constantly
+    // move for every character.
+    if (segmentChanged || box.top < topGuard || box.bottom > bottomGuard) target.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }, [activeSegmentId, activeCharacterIndex, autoFollow, pausedFollow])
   if (error) return <ErrorScreen message={error} />; if (!book) return <LoadingScreen />; if (!chapter) return <ErrorScreen message="未找到这一篇。" />
   const canPlay = Boolean(chapter.audioUrl && chapter.timelineValid && audio.playable.length)
