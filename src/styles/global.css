@@ -7,3 +7,4 @@
 .reader-segment p{line-break:strict;text-wrap:pretty;word-break:normal;overflow-wrap:normal}.reader-segment rt{font-size:clamp(.65rem,.34em,.78rem);line-height:1;white-space:nowrap}
 .reader-clause.compact{display:inline-block;white-space:nowrap}
 .player-controls .play-button{font-size:0}.play-icon{display:block;width:0;height:0;border-top:.52rem solid transparent;border-bottom:.52rem solid transparent;border-left:.8rem solid currentColor;transform:translateX(.08rem)}.pause-icon{width:.72rem;height:.9rem;border:0;background:linear-gradient(90deg,currentColor 0 .2rem,transparent .2rem .46rem,currentColor .46rem .66rem);transform:none}
+.reader-segment p{text-align:center}
