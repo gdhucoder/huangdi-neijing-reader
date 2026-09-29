@@ -1,0 +1,11 @@
+{
+  "id": "chapter-001", "order": 1, "collection": "素问", "title": "上古天真论", "subtitle": "人应该怎样活",
+  "audio": { "src": "audio/chapter-001.mp3", "duration_ms": 18000 },
+  "segments": [
+    { "id": "sgtz-01", "order": 1, "text": "昔在黄帝，生而神灵，弱而能言，幼而徇齐，长而敦敏，成而登天。", "speakable": true, "start_ms": 0, "end_ms": 6000, "translation": "从前黄帝天赋聪慧，幼年就能言善思，长大后敦厚敏锐，最终成为众人敬仰的圣王。" },
+    { "id": "sgtz-02", "order": 2, "text": "乃问于天师曰：余闻上古之人，春秋皆度百岁，而动作不衰。", "speakable": true, "start_ms": 6000, "end_ms": 12000, "translation": "于是黄帝向老师请教：我听说上古的人，年龄都能超过一百岁，行动却不衰老。", "pronunciation": [
+      {"text":"乃","pinyin":"nai3"},{"text":"问","pinyin":"wen4"},{"text":"于","pinyin":"yu2"},{"text":"天","pinyin":"tian1"},{"text":"师","pinyin":"shi1"},{"text":"曰","pinyin":"yue1"},{"text":"：","pinyin":""},{"text":"余","pinyin":"yu2"},{"text":"闻","pinyin":"wen2"},{"text":"上","pinyin":"shang4"},{"text":"古","pinyin":"gu3"},{"text":"之","pinyin":"zhi1"},{"text":"人","pinyin":"ren2"},{"text":"，","pinyin":""},{"text":"春","pinyin":"chun1"},{"text":"秋","pinyin":"qiu1"},{"text":"皆","pinyin":"jie1"},{"text":"度","pinyin":"du4"},{"text":"百","pinyin":"bai3"},{"text":"岁","pinyin":"sui4"},{"text":"，","pinyin":""},{"text":"而","pinyin":"er2"},{"text":"动","pinyin":"dong4"},{"text":"作","pinyin":"zuo4"},{"text":"不","pinyin":"bu4"},{"text":"衰","pinyin":"shuai1"},{"text":"。","pinyin":""}
+    ] },
+    { "id": "sgtz-03", "order": 3, "text": "今时之人不然也，以酒为浆，以妄为常，醉以入房，以欲竭其精。", "speakable": true, "start_ms": 12000, "end_ms": 18000, "translation": "而当时的人却不是这样：把饮酒当作日常，以放纵为常态，醉后行房，用欲望耗尽精力。" }
+  ]
+}

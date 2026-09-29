@@ -1,0 +1,1 @@
+export function Translation({ text, expanded, onToggle }: { text: string; expanded: boolean; onToggle: () => void }) { return <div className="translation-wrap"><button className="translation-toggle" onClick={onToggle} aria-expanded={expanded}>白话</button>{expanded && <p className="translation-text">{text}</p>}</div> }

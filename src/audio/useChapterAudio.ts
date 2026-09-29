@@ -1,0 +1,13 @@
+import { useEffect, useRef, useState } from 'react'
+import { findActiveSegmentIndex, playableSegments } from './timeline'
+import type { ReaderChapter, ReaderSegment } from '../types/reader'
+export function useChapterAudio(chapter: ReaderChapter, playbackRate: number, onActiveSegment: (segment: ReaderSegment | null, positionMs: number) => void, onPause: (positionMs: number) => void) {
+  const audioRef = useRef<HTMLAudioElement>(null); const [isPlaying, setIsPlaying] = useState(false); const [positionMs, setPositionMs] = useState(0); const [audioError, setAudioError] = useState<string | null>(null); const activeIndexRef = useRef(0); const playable = chapter.timelineValid ? playableSegments(chapter.segments) : []
+  useEffect(() => { if (audioRef.current) audioRef.current.playbackRate = playbackRate }, [playbackRate])
+  useEffect(() => { const audio = audioRef.current; if (!audio) return; audio.pause(); audio.currentTime = 0; setPositionMs(0); setIsPlaying(false); setAudioError(null); activeIndexRef.current = 0 }, [chapter.id])
+  const reportPosition = () => { const audio = audioRef.current; if (!audio) return; const nextPosition = Math.round(audio.currentTime * 1000); setPositionMs(nextPosition); const index = findActiveSegmentIndex(playable, nextPosition, activeIndexRef.current); if (index >= 0) activeIndexRef.current = index; onActiveSegment(index >= 0 ? playable[index] : null, nextPosition) }
+  const seekAndPlay = async (segment: ReaderSegment) => { const audio = audioRef.current; if (!audio || segment.startMs === null || !chapter.audioUrl || !chapter.timelineValid) return; audio.currentTime = segment.startMs / 1000; reportPosition(); try { await audio.play() } catch { setAudioError('音频无法开始播放，请再试一次。') } }
+  const toggle = async () => { const audio = audioRef.current; if (!audio || !chapter.audioUrl || !playable.length) return; if (audio.paused) { if (audio.currentTime === 0) await seekAndPlay(playable[0]); else try { await audio.play() } catch { setAudioError('音频无法开始播放，请再试一次。') } } else audio.pause() }
+  const skip = async (direction: -1 | 1) => { const current = Math.max(0, findActiveSegmentIndex(playable, positionMs, activeIndexRef.current)); const target = playable[Math.min(playable.length - 1, Math.max(0, current + direction))]; if (target) await seekAndPlay(target) }
+  return { audioRef, isPlaying, positionMs, audioError, setAudioError, playable, toggle, skip, seekAndPlay, onTimeUpdate: reportPosition, onPlay: () => setIsPlaying(true), onPause: () => { setIsPlaying(false); onPause(Math.round((audioRef.current?.currentTime ?? 0) * 1000)) }, onEnded: () => setIsPlaying(false), onError: () => setAudioError('音频加载失败，请检查网络。') }
+}

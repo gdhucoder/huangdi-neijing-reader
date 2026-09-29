@@ -1,0 +1,18 @@
+{
+  "id": "huangdi-neijing-selected",
+  "title": "黄帝内经",
+  "subtitle": "精选",
+  "description": "选取适合初读者阅读的篇章，配有注音、朗读与白话解释。",
+  "sources": [
+    { "label": "当前内容包", "value": "开发演示 fixture，等待 AncientMedicalTTS 正式 Publication Bundle 替换" },
+    { "label": "内容结构", "value": "ancient-medical-publication-bundle v1.0" }
+  ],
+  "chapters": [
+    { "id": "chapter-001", "order": 1, "collection": "素问", "title": "上古天真论", "subtitle": "人应该怎样活", "src": "chapters/chapter-001.json" },
+    { "id": "chapter-002", "order": 2, "collection": "素问", "title": "四气调神大论", "subtitle": "顺着四季生活", "src": "chapters/chapter-002.json" },
+    { "id": "chapter-003", "order": 3, "collection": "素问", "title": "生气通天论", "subtitle": "人与天地之气", "src": "chapters/chapter-003.json" },
+    { "id": "chapter-004", "order": 4, "collection": "素问", "title": "灵兰秘典论", "subtitle": "身体里的“十二官”", "src": "chapters/chapter-004.json" },
+    { "id": "chapter-005", "order": 5, "collection": "灵枢", "title": "本神", "subtitle": "什么是精、神、魂、魄", "src": "chapters/chapter-005.json" },
+    { "id": "chapter-006", "order": 6, "collection": "灵枢", "title": "天年", "subtitle": "人的一生", "src": "chapters/chapter-006.json" }
+  ]
+}

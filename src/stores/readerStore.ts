@@ -1,0 +1,4 @@
+import type { ReadingProgress } from '../types/reader'
+const progressKey = 'huangdi-neijing-reader-progress'
+export function readProgress(): ReadingProgress | null { try { const parsed: unknown = JSON.parse(localStorage.getItem(progressKey) ?? 'null'); if (!parsed || typeof parsed !== 'object') return null; const item = parsed as Partial<ReadingProgress>; if (typeof item.bookId !== 'string' || typeof item.chapterId !== 'string' || typeof item.segmentId !== 'string' || typeof item.audioPositionMs !== 'number') return null; return { bookId: item.bookId, chapterId: item.chapterId, segmentId: item.segmentId, audioPositionMs: item.audioPositionMs, updatedAt: Number(item.updatedAt) || 0 } } catch { return null } }
+export function saveProgress(progress: Omit<ReadingProgress, 'updatedAt'>): void { localStorage.setItem(progressKey, JSON.stringify({ ...progress, updatedAt: Date.now() })) }
