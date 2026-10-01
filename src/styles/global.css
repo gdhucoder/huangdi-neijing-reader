@@ -9,3 +9,5 @@
 .player-controls .play-button{font-size:0}.play-icon{display:block;width:0;height:0;border-top:.52rem solid transparent;border-bottom:.52rem solid transparent;border-left:.8rem solid currentColor;transform:translateX(.08rem)}.pause-icon{width:.72rem;height:.9rem;border:0;background:linear-gradient(90deg,currentColor 0 .2rem,transparent .2rem .46rem,currentColor .46rem .66rem);transform:none}
 .reader-segment p{text-align:center}
 @media (max-width:719px){.reader-segment rt{font-size:clamp(.72rem,.42em,.94rem)}}
+.reader-punctuation-pair{white-space:nowrap}
+@media (max-width:719px){.reader-segment.short-segment p{text-wrap:balance}}
