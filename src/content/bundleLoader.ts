@@ -1,7 +1,8 @@
 import { appAssetUrl, contentBaseUrl, contentUrl, ensureSafeRelativePath, DEFAULT_BOOK_ROOT } from '../utils/paths'
 
-export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; src?: string; path?: string; content?: string }> }
-export interface RawBook { id: string; title: string; subtitle?: string; description?: string; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: Array<{ id: string; order?: number; collection?: string; title?: string; subtitle?: string; src?: string; path?: string; content?: string; audio?: string }> }
+export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; src?: string; path?: string; content?: string; audio?: string }> }
+export interface RawBookChapterEntry { id: string; order?: number; collection?: string; title?: string; subtitle?: string; src?: string; path?: string; content?: string; audio?: string }
+export interface RawBook { id: string; title: string; subtitle?: string; description?: string; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: RawBookChapterEntry[] }
 export interface RawCatalogEntry { id: string; path: string; title: string; subtitle?: string; description?: string }
 export interface RawCatalog { version: string; books: RawCatalogEntry[] }
 export interface RawChapter {
@@ -42,6 +43,11 @@ export async function loadRawBundle(root = DEFAULT_BOOK_ROOT): Promise<RawBundle
   const book = await fetchJson<RawBook>(resourcePath(manifest.book), baseUrl)
   const entries = book.chapters ?? manifest.chapters
   if (!entries?.length) throw new Error('内容包没有可阅读的篇章。')
-  const chapters = await Promise.all(entries.map((chapter) => fetchJson<RawChapter>(resourcePath(chapter.content ?? chapter.src ?? chapter.path ?? ''), baseUrl)))
+  const chapters = await Promise.all(entries.map(async (entry) => {
+    const chapter = await fetchJson<RawChapter>(resourcePath(entry.content ?? entry.src ?? entry.path ?? ''), baseUrl)
+    if (entry.id && chapter.id !== entry.id) throw new Error(`章节标识不一致：${entry.id}。`)
+    if (entry.audio && (!chapter.audio?.src || ensureSafeRelativePath(entry.audio) !== ensureSafeRelativePath(chapter.audio.src))) throw new Error(`章节音频路径不一致：${entry.id}。`)
+    return chapter
+  }))
   return { manifest, book, chapters, baseUrl }
 }
