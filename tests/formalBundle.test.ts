@@ -19,4 +19,15 @@ describe('formal AncientMedicalTTS bundle', () => {
     expect(adapted.chapters[0].segments[0].pronunciationTimings?.[0]).toMatchObject({ text: '昔', startMs: 34 })
     expect(adapted.chapters.every((chapter) => chapter.segments.every((segment) => validPronunciation(segment.pronunciationTokens, segment.text)))).toBe(true)
   })
+
+  it('includes the second Zhuangzi inner chapter in the book bundle', () => {
+    const root = resolve(process.cwd(), 'public/books/xiaoyaoyou-v01')
+    const manifest = JSON.parse(readFileSync(resolve(root, 'manifest.json'), 'utf8'))
+    const book = JSON.parse(readFileSync(resolve(root, 'book.json'), 'utf8'))
+    const chapters = book.chapters.map((entry: { content: string }) => JSON.parse(readFileSync(resolve(root, entry.content), 'utf8')))
+    const adapted = adaptBundle({ manifest, book, chapters, baseUrl: '/books/xiaoyaoyou-v01/' } as RawBundle)
+    expect(adapted.title).toBe('庄子内篇')
+    expect(adapted.chapters.map((chapter) => chapter.title)).toEqual(['逍遥游', '齐物论'])
+    expect(adapted.chapters.every((chapter) => chapter.timelineValid && chapter.audioUrl?.includes('/books/xiaoyaoyou-v01/audio/'))).toBe(true)
+  })
 })

@@ -16,6 +16,13 @@
       "title": "逍遥游",
       "content": "chapters/chapter-001.json",
       "audio": "audio/chapter-001.mp3"
+    },
+    {
+      "id": "01a1480b-0090-739a-a945-c8f0511499ae",
+      "order": 2,
+      "title": "齐物论",
+      "content": "chapters/chapter-002.json",
+      "audio": "audio/chapter-002.mp3"
     }
   ]
 }
