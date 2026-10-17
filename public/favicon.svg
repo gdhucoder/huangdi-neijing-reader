@@ -1,16 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="jade" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#286353"/>
-      <stop offset="1" stop-color="#173f36"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="1.6" flood-color="#102e27" flood-opacity=".28"/>
-    </filter>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#jade)"/>
-  <circle cx="32" cy="32" r="21" fill="#f7f1e6" filter="url(#shadow)"/>
-  <path d="M22 22h20M22 30h20M22 38h13" fill="none" stroke="#285d4f" stroke-linecap="round" stroke-width="3.4"/>
-  <path d="M18 19v26M46 19v26" fill="none" stroke="#b98543" stroke-linecap="round" stroke-width="2.2"/>
-  <path d="M32 18v28" fill="none" stroke="#b98543" stroke-linecap="round" stroke-width="1.4" opacity=".8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">古籍阅读器</title>
+  <rect width="64" height="64" rx="14" fill="#1f5b4d"/>
+  <text x="32" y="46" text-anchor="middle" fill="#f7f1e6" font-family="STSong, Songti SC, SimSun, serif" font-size="43" font-weight="600">古</text>
 </svg>
