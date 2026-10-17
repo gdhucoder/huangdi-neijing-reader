@@ -1,6 +1,6 @@
-# 黄帝内经 · 精选
+# 古籍阅读器
 
-一个移动端优先的静态阅读器：阅读《黄帝内经》精选篇章的原文、注音、朗读和白话解释。
+一个移动端优先的静态阅读器：从书库选择古籍，再阅读原文、注音、朗读和白话解释。
 
 ## 项目边界
 
@@ -15,13 +15,13 @@ pnpm test
 pnpm build
 ```
 
-默认读取 `public/books/huangdi-neijing-selected-v01/`；生产环境可设置 `VITE_CONTENT_BASE_URL`，例如 `https://content.example.com/huangdi-neijing-selected-v01/`。内容路径必须保持相对路径，且不能使用 `..`。
+书库由 `public/books/catalog.json` 管理，目前包含 `huangdi-neijing-selected-v01`（《黄帝内经精选》）和 `xiaoyaoyou-v01`（《逍遥游》）。每本书的内容包放在 `public/books/<book-root>/`，内容路径必须保持相对路径，且不能使用 `..`。默认内容包仍可通过 `VITE_CONTENT_BASE_URL` 指向外部 CDN，例如 `https://content.example.com/huangdi-neijing-selected-v01/`。
 
 ## Publication Bundle v1
 
 支持 `format: ancient-medical-publication-bundle` 和 `format_version: 1.0`。加载顺序为 `manifest.json → book.json → chapters/*.json → audio/*.mp3`。UI 先通过 `bundleLoader` 获取原始 JSON，再由 `bundleAdapter` 转成 Reader Domain Model，界面组件不会直接依赖原始 Bundle 字段。
 
-当前默认内容为 `huangdi-neijing-selected-v01`，包含 AncientMedicalTTS 导出的 6 篇正式 Bundle；仓库中的其他 Bundle 目录保留用于历史版本或开发测试，不是默认内容。
+当前正式书库包含 AncientMedicalTTS 导出的《黄帝内经精选》6 篇 Bundle 和《逍遥游》1 篇 Bundle。阅读进度按书籍分别保存，书籍内的章节目录和自动播放下一章也彼此隔离。
 
 ## PWA 与部署
 

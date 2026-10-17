@@ -1,20 +1,31 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getReaderBook } from '../content/contentProvider'
-import { readProgress } from '../stores/readerStore'
-import type { ReaderBook, ReadingProgress } from '../types/reader'
+import { getBookCatalog } from '../content/contentProvider'
+import type { ReaderBookSummary } from '../types/reader'
 
 export function HomePage() {
-  const [book, setBook] = useState<ReaderBook | null>(null); const [error, setError] = useState<string | null>(null); const [progress, setProgress] = useState<ReadingProgress | null>(() => readProgress())
-  useEffect(() => { getReaderBook().then(setBook).catch((reason: unknown) => { console.error(reason); setError(reason instanceof Error ? reason.message : '内容包无法加载。') }) }, [])
-  useEffect(() => { const update = () => setProgress(readProgress()); window.addEventListener('focus', update); return () => window.removeEventListener('focus', update) }, [])
+  const [books, setBooks] = useState<ReaderBookSummary[] | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+    getBookCatalog().then(setBooks).catch((reason: unknown) => {
+      console.error(reason)
+      setError(reason instanceof Error ? reason.message : '书库目录无法加载。')
+    })
+  }, [])
   if (error) return <ErrorScreen message={error} />
-  if (!book) return <LoadingScreen />
-  const currentChapter = book.chapters.find((chapter) => chapter.id === progress?.chapterId); const currentSegment = currentChapter?.segments.find((segment) => segment.id === progress?.segmentId)
-  return <main className="home page-shell"><header className="home-header"><p className="eyebrow">Huangdi Neijing Reader</p><h1>{book.title}{book.subtitle && <em>{book.subtitle}</em>}</h1><p className="intro">{book.description ?? '选取适合初读者阅读的篇章，配有注音、朗读与白话解释。'}</p></header>
-    {currentChapter && currentSegment && <section className="continue-reading"><p className="section-label">继续阅读</p><h2>{currentChapter.title}</h2><p>“{currentSegment.text.slice(0, 18)}{currentSegment.text.length > 18 ? '…' : ''}”</p><Link to={`/chapter/${currentChapter.id}`} state={{ restoreProgress: true }} className="continue-link">继续阅读</Link></section>}
-    <section className="chapter-index"><div className="section-title"><p className="section-label">精选篇章</p><Link to="/about">关于</Link></div><ol>{book.chapters.map((chapter) => <li key={chapter.id}><Link to={`/chapter/${chapter.id}`}><span className="chapter-number">{String(chapter.order).padStart(2, '0')}</span><span><strong>{chapter.title}</strong>{chapter.subtitle && <small>{chapter.subtitle}</small>}</span><b aria-hidden="true">›</b></Link></li>)}</ol></section>
+  if (!books) return <LoadingScreen />
+  return <main className="home page-shell">
+    <header className="home-header">
+      <p className="eyebrow">Ancient Classics Reader</p>
+      <h1>古籍阅读器<em>原文 · 注音 · 朗读</em></h1>
+      <p className="intro">选择一本书，进入篇章目录，再开始阅读、听读与跟随朗读。</p>
+    </header>
+    <section className="book-index" aria-labelledby="book-index-title">
+      <div className="section-title"><p id="book-index-title" className="section-label">我的书籍</p><Link to="/about">关于</Link></div>
+      <ol>{books.map((book) => <li key={book.id}><Link className="book-card" to={`/book/${book.id}`}><span className="book-card-mark" aria-hidden="true">卷</span><span className="book-card-copy"><strong>{book.title}</strong>{book.subtitle && <small>{book.subtitle}</small>}{book.description && <span>{book.description}</span>}</span><b aria-hidden="true">›</b></Link></li>)}</ol>
+    </section>
   </main>
 }
-export function LoadingScreen() { return <main className="center-state"><p className="eyebrow">黄帝内经 · 精选</p><p>正在准备篇章…</p></main> }
-export function ErrorScreen({ message }: { message: string }) { return <main className="center-state"><p className="eyebrow">黄帝内经 · 精选</p><h1>暂时无法打开</h1><p>{message}</p><button onClick={() => window.location.reload()}>重新尝试</button></main> }
+
+export function LoadingScreen() { return <main className="center-state"><p className="eyebrow">古籍阅读器</p><p>正在准备书库…</p></main> }
+export function ErrorScreen({ message }: { message: string }) { return <main className="center-state"><p className="eyebrow">古籍阅读器</p><h1>暂时无法打开</h1><p>{message}</p><button onClick={() => window.location.reload()}>重新尝试</button></main> }

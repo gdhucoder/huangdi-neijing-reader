@@ -1,6 +1,8 @@
 # 音频导入规范
 
-本文档约束 `黄帝内经 · 精选` 内容包中的章节音频、章节 JSON 和时间轴格式。
+本文档约束古籍阅读器内容包中的章节音频、章节 JSON 和时间轴格式。
+
+书库入口由 `public/books/catalog.json` 管理。新增一本书时，先把完整 Bundle 放入 `public/books/<book-root>/`，再在目录中加入唯一的 `id`、对应 `path` 和展示用的 `title`；Bundle 内部的 `book.json`、章节 JSON 与音频约束不变。
 
 ## 1. 当前应用读取的位置
 

@@ -1,0 +1,19 @@
+{
+  "version": "1",
+  "books": [
+    {
+      "id": "huangdi-neijing-selected-v01",
+      "path": "huangdi-neijing-selected-v01",
+      "title": "黄帝内经精选",
+      "subtitle": "精选六篇 · 原文 · 注音 · 朗读",
+      "description": "从《黄帝内经》中精选六篇适合初读的篇章，配有注音、朗读与白话解释。"
+    },
+    {
+      "id": "xiaoyaoyou-v01",
+      "path": "xiaoyaoyou-v01",
+      "title": "逍遥游",
+      "subtitle": "庄周 · 原文 · 注音 · 朗读",
+      "description": "《庄子》内篇第一，配有注音、朗读与白话解释。"
+    }
+  ]
+}

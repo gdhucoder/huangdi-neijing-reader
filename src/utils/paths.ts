@@ -6,16 +6,25 @@ export function ensureSafeRelativePath(path: string): string {
   return cleaned
 }
 
-export function contentBaseUrl(): string {
+export const DEFAULT_BOOK_ID = 'huangdi-neijing-selected-v01'
+export const DEFAULT_BOOK_ROOT = DEFAULT_BOOK_ID
+
+function appBaseUrl(): string {
+  return import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`
+}
+
+export function appAssetUrl(path: string): string {
+  return `${appBaseUrl()}${ensureSafeRelativePath(path)}`
+}
+
+export function contentBaseUrl(root = DEFAULT_BOOK_ROOT): string {
   const configured = import.meta.env.VITE_CONTENT_BASE_URL?.trim()
-  const appBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`
-  const base = configured || `${appBase}books/huangdi-neijing-selected-v01/`
+  const base = configured && root === DEFAULT_BOOK_ROOT ? configured : `${appBaseUrl()}books/${ensureSafeRelativePath(root)}/`
   return base.endsWith('/') ? base : `${base}/`
 }
 
-export function contentUrl(path: string): string {
+export function contentUrl(path: string, base = contentBaseUrl()): string {
   const safePath = ensureSafeRelativePath(path)
-  const base = contentBaseUrl()
   if (/^https?:\/\//i.test(base)) return new URL(safePath, base).toString()
   return `${base}${safePath}`
 }

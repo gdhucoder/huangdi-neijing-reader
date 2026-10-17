@@ -1,0 +1,21 @@
+{
+  "id": "01a147de-cebb-7405-a2e0-7d264cb59277",
+  "title": "逍遥游",
+  "author": "庄周",
+  "dynasty": "先秦",
+  "edition": null,
+  "language": "zh-CN",
+  "reading_mode": "modern_standard_mandarin",
+  "audio": {
+    "format": "mp3"
+  },
+  "chapters": [
+    {
+      "id": "01a147de-cebb-7405-a2e0-7d27a6f9fc1e",
+      "order": 1,
+      "title": "逍遥游",
+      "content": "chapters/chapter-001.json",
+      "audio": "audio/chapter-001.mp3"
+    }
+  ]
+}

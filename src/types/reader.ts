@@ -47,6 +47,14 @@ export interface ReaderBook {
   chapters: ReaderChapter[]
 }
 
+export interface ReaderBookSummary {
+  id: string
+  path: string
+  title: string
+  subtitle?: string
+  description?: string
+}
+
 export interface ReadingProgress {
   bookId: string
   chapterId: string
