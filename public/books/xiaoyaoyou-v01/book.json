@@ -23,6 +23,34 @@
       "title": "齐物论",
       "content": "chapters/chapter-002.json",
       "audio": "audio/chapter-002.mp3"
+    },
+    {
+      "id": "01a148a2-3834-757b-ad21-2dda8db2727d",
+      "order": 3,
+      "title": "人间世",
+      "content": "chapters/chapter-003.json",
+      "audio": "audio/chapter-003.mp3"
+    },
+    {
+      "id": "01a148a4-288c-72f1-878e-ab9841dd4a76",
+      "order": 4,
+      "title": "德充符",
+      "content": "chapters/chapter-004.json",
+      "audio": "audio/chapter-004.mp3"
+    },
+    {
+      "id": "01a148a6-ae0d-7458-a704-64945dc0bdf9",
+      "order": 5,
+      "title": "大宗师",
+      "content": "chapters/chapter-005.json",
+      "audio": "audio/chapter-005.mp3"
+    },
+    {
+      "id": "01a148b6-60b9-7715-9a60-cda0589090de",
+      "order": 6,
+      "title": "应帝王",
+      "content": "chapters/chapter-006.json",
+      "audio": "audio/chapter-006.mp3"
     }
   ]
 }

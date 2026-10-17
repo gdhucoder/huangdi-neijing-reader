@@ -21,7 +21,7 @@ pnpm build
 
 支持 `format: ancient-medical-publication-bundle` 和 `format_version: 1.0`。加载顺序为 `manifest.json → book.json → chapters/*.json → audio/*.mp3`。UI 先通过 `bundleLoader` 获取原始 JSON，再由 `bundleAdapter` 转成 Reader Domain Model，界面组件不会直接依赖原始 Bundle 字段。
 
-当前正式书库包含 AncientMedicalTTS 导出的《黄帝内经精选》6 篇 Bundle 和《庄子内篇》1 篇 Bundle（首篇章节为《逍遥游》）。阅读进度按书籍分别保存，书籍内的章节目录和自动播放下一章也彼此隔离。
+当前正式书库包含 AncientMedicalTTS 导出的《黄帝内经精选》6 篇 Bundle 和《庄子内篇》6 篇 Bundle（从《逍遥游》到《应帝王》）。阅读进度按书籍分别保存，书籍内的章节目录和自动播放下一章也彼此隔离。
 
 ## PWA 与部署
 

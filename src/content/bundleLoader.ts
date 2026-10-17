@@ -1,6 +1,6 @@
 import { appAssetUrl, contentBaseUrl, contentUrl, ensureSafeRelativePath, DEFAULT_BOOK_ROOT } from '../utils/paths'
 
-export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; src?: string; path?: string; content?: string; audio?: string }> }
+export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; order?: number; src?: string; path?: string; content?: string; audio?: string }> }
 export interface RawBookChapterEntry { id: string; order?: number; collection?: string; title?: string; subtitle?: string; src?: string; path?: string; content?: string; audio?: string }
 export interface RawBook { id: string; title: string; subtitle?: string; description?: string; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: RawBookChapterEntry[] }
 export interface RawCatalogEntry { id: string; path: string; title: string; subtitle?: string; description?: string }
@@ -46,6 +46,7 @@ export async function loadRawBundle(root = DEFAULT_BOOK_ROOT): Promise<RawBundle
   const chapters = await Promise.all(entries.map(async (entry) => {
     const chapter = await fetchJson<RawChapter>(resourcePath(entry.content ?? entry.src ?? entry.path ?? ''), baseUrl)
     if (entry.id && chapter.id !== entry.id) throw new Error(`章节标识不一致：${entry.id}。`)
+    if (entry.order !== undefined && chapter.order !== undefined && entry.order !== chapter.order) throw new Error(`章节顺序不一致：${entry.id}。`)
     if (entry.audio && (!chapter.audio?.src || ensureSafeRelativePath(entry.audio) !== ensureSafeRelativePath(chapter.audio.src))) throw new Error(`章节音频路径不一致：${entry.id}。`)
     return chapter
   }))
