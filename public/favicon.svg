@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">古籍阅读器</title>
+  <title id="title">经典诵读</title>
   <rect width="64" height="64" rx="14" fill="#1f5b4d"/>
   <text x="32" y="46" text-anchor="middle" fill="#f7f1e6" font-family="STSong, Songti SC, SimSun, serif" font-size="43" font-weight="600">古</text>
 </svg>
