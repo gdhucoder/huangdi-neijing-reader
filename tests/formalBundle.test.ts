@@ -45,5 +45,6 @@ describe('formal AncientMedicalTTS bundle', () => {
     expect(adapted.chapters.map((chapter) => chapter.order)).toEqual(Array.from({ length: 81 }, (_, index) => index + 1))
     expect(adapted.chapters.every((chapter) => chapter.timelineValid && chapter.audioUrl?.includes('/books/daodejing-v01/audio/'))).toBe(true)
     expect(adapted.chapters.every((chapter) => chapter.segments.every((segment) => validPronunciation(segment.pronunciationTokens, segment.text)))).toBe(true)
+    expect(adapted.chapters.every((chapter) => chapter.segments.every((segment) => segment.translation?.trim()))).toBe(true)
   })
 })
