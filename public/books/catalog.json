@@ -9,6 +9,13 @@
       "description": "从《黄帝内经》中精选六篇适合初读的篇章，配有注音、朗读与白话解释。"
     },
     {
+      "id": "daodejing-v01",
+      "path": "daodejing-v01",
+      "title": "道德经",
+      "subtitle": "老子 · 八十一章 · 注音 · 朗读",
+      "description": "《道德经》八十一章，配有注音、朗读与白话解释。"
+    },
+    {
       "id": "xiaoyaoyou-v01",
       "path": "xiaoyaoyou-v01",
       "title": "庄子内篇",

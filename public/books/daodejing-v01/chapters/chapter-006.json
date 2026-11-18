@@ -1,0 +1,384 @@
+{
+  "id": "01a1ed42-c4a0-77b2-a8b2-c2757afe6524",
+  "order": 6,
+  "title": "第6章",
+  "collection": null,
+  "subtitle": null,
+  "audio": {
+    "src": "audio/chapter-006.mp3",
+    "duration_ms": 8530,
+    "format": "mp3"
+  },
+  "segments": [
+    {
+      "id": "01a1ed42-c4a0-77b2-a8b2-c27692a5ebc1",
+      "order": 1,
+      "text": "谷神不死是谓玄牝。玄牝之门是谓天地根。绵绵若存，用之不勤。",
+      "translation": null,
+      "speak_enabled": true,
+      "start_ms": 0,
+      "end_ms": 8528,
+      "duration_ms": 8528,
+      "pronunciation": {
+        "tokens": [
+          {
+            "text": "谷",
+            "reference_pinyin": "gu3",
+            "confirmed_pinyin": "gu3",
+            "forced": true
+          },
+          {
+            "text": "神",
+            "reference_pinyin": "shen2",
+            "confirmed_pinyin": "shen2",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu4",
+            "confirmed_pinyin": "bu4",
+            "forced": true
+          },
+          {
+            "text": "死",
+            "reference_pinyin": "si3",
+            "confirmed_pinyin": "si3",
+            "forced": true
+          },
+          {
+            "text": "是",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "谓",
+            "reference_pinyin": "wei4",
+            "confirmed_pinyin": "wei4",
+            "forced": true
+          },
+          {
+            "text": "玄",
+            "reference_pinyin": "xuan2",
+            "confirmed_pinyin": "xuan2",
+            "forced": true
+          },
+          {
+            "text": "牝",
+            "reference_pinyin": "pin4",
+            "confirmed_pinyin": "pin4",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "玄",
+            "reference_pinyin": "xuan2",
+            "confirmed_pinyin": "xuan2",
+            "forced": true
+          },
+          {
+            "text": "牝",
+            "reference_pinyin": "pin4",
+            "confirmed_pinyin": "pin4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "门",
+            "reference_pinyin": "men2",
+            "confirmed_pinyin": "men2",
+            "forced": true
+          },
+          {
+            "text": "是",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "谓",
+            "reference_pinyin": "wei4",
+            "confirmed_pinyin": "wei4",
+            "forced": true
+          },
+          {
+            "text": "天",
+            "reference_pinyin": "tian1",
+            "confirmed_pinyin": "tian1",
+            "forced": true
+          },
+          {
+            "text": "地",
+            "reference_pinyin": "di4",
+            "confirmed_pinyin": "di4",
+            "forced": true
+          },
+          {
+            "text": "根",
+            "reference_pinyin": "gen1",
+            "confirmed_pinyin": "gen1",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "绵",
+            "reference_pinyin": "mian2",
+            "confirmed_pinyin": "mian2",
+            "forced": true
+          },
+          {
+            "text": "绵",
+            "reference_pinyin": "mian2",
+            "confirmed_pinyin": "mian2",
+            "forced": true
+          },
+          {
+            "text": "若",
+            "reference_pinyin": "ruo4",
+            "confirmed_pinyin": "ruo4",
+            "forced": true
+          },
+          {
+            "text": "存",
+            "reference_pinyin": "cun2",
+            "confirmed_pinyin": "cun2",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "用",
+            "reference_pinyin": "yong4",
+            "confirmed_pinyin": "yong4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu4",
+            "confirmed_pinyin": "bu4",
+            "forced": true
+          },
+          {
+            "text": "勤",
+            "reference_pinyin": "qin2",
+            "confirmed_pinyin": "qin2",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          }
+        ],
+        "tts_actual": [
+          {
+            "text": "谷",
+            "pinyin": "gu3",
+            "begin_ms": 34,
+            "end_ms": 325
+          },
+          {
+            "text": "神",
+            "pinyin": "shen2",
+            "begin_ms": 325,
+            "end_ms": 522
+          },
+          {
+            "text": "不",
+            "pinyin": "bu4",
+            "begin_ms": 522,
+            "end_ms": 766
+          },
+          {
+            "text": "死",
+            "pinyin": "si3",
+            "begin_ms": 766,
+            "end_ms": 1056
+          },
+          {
+            "text": "是",
+            "pinyin": "shi4",
+            "begin_ms": 1056,
+            "end_ms": 1288
+          },
+          {
+            "text": "谓",
+            "pinyin": "wei4",
+            "begin_ms": 1288,
+            "end_ms": 1439
+          },
+          {
+            "text": "玄",
+            "pinyin": "xvan2",
+            "begin_ms": 1439,
+            "end_ms": 1718
+          },
+          {
+            "text": "牝",
+            "pinyin": "pin4",
+            "begin_ms": 1718,
+            "end_ms": 1996
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 1996,
+            "end_ms": 2113
+          },
+          {
+            "text": "玄",
+            "pinyin": "xvan2",
+            "begin_ms": 2620,
+            "end_ms": 2922
+          },
+          {
+            "text": "牝",
+            "pinyin": "pin4",
+            "begin_ms": 2922,
+            "end_ms": 3200
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 3200,
+            "end_ms": 3421
+          },
+          {
+            "text": "门",
+            "pinyin": "men2",
+            "begin_ms": 3421,
+            "end_ms": 3607
+          },
+          {
+            "text": "是",
+            "pinyin": "shi4",
+            "begin_ms": 3607,
+            "end_ms": 3909
+          },
+          {
+            "text": "谓",
+            "pinyin": "wei4",
+            "begin_ms": 3909,
+            "end_ms": 4094
+          },
+          {
+            "text": "天",
+            "pinyin": "tian1",
+            "begin_ms": 4094,
+            "end_ms": 4315
+          },
+          {
+            "text": "地",
+            "pinyin": "di4",
+            "begin_ms": 4315,
+            "end_ms": 4570
+          },
+          {
+            "text": "根",
+            "pinyin": "gen1",
+            "begin_ms": 4570,
+            "end_ms": 4837
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 4837,
+            "end_ms": 4919
+          },
+          {
+            "text": "绵",
+            "pinyin": "mian2",
+            "begin_ms": 5515,
+            "end_ms": 5770
+          },
+          {
+            "text": "绵",
+            "pinyin": "mian2",
+            "begin_ms": 5770,
+            "end_ms": 5991
+          },
+          {
+            "text": "若",
+            "pinyin": "ruo4",
+            "begin_ms": 5991,
+            "end_ms": 6200
+          },
+          {
+            "text": "存",
+            "pinyin": "cun2",
+            "begin_ms": 6200,
+            "end_ms": 6525
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 6525,
+            "end_ms": 6710
+          },
+          {
+            "text": "用",
+            "pinyin": "yong4",
+            "begin_ms": 6710,
+            "end_ms": 7094
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 7094,
+            "end_ms": 7268
+          },
+          {
+            "text": "不",
+            "pinyin": "bu4",
+            "begin_ms": 7268,
+            "end_ms": 7430
+          },
+          {
+            "text": "勤",
+            "pinyin": "qin2",
+            "begin_ms": 7430,
+            "end_ms": 7790
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 7790,
+            "end_ms": 7825
+          },
+          {
+            "text": "",
+            "pinyin": "SIL",
+            "begin_ms": 7825,
+            "end_ms": 8529
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1836 @@
+{
+  "id": "01a1ed46-51d5-73db-8f30-a1f7fe5a7c0e",
+  "order": 64,
+  "title": "第64章",
+  "collection": null,
+  "subtitle": null,
+  "audio": {
+    "src": "audio/chapter-064.mp3",
+    "duration_ms": 40910,
+    "format": "mp3"
+  },
+  "segments": [
+    {
+      "id": "01a1ed46-51d6-71b1-8acd-9a360bca7437",
+      "order": 1,
+      "text": "其安易持，其未兆易谋。其脆易泮，其微易散。为之于未有，治之于未乱。合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。为者败之，执者失之。是以圣人无为故无败，无执故无失。民之从事，常于几成而败之。慎终如始，则无败事。是以圣人欲不欲，不贵难得之货；学不学，复众人之所过，以辅万物之自然而不敢为。",
+      "translation": null,
+      "speak_enabled": true,
+      "start_ms": 0,
+      "end_ms": 40908,
+      "duration_ms": 40908,
+      "pronunciation": {
+        "tokens": [
+          {
+            "text": "其",
+            "reference_pinyin": "qi2",
+            "confirmed_pinyin": "qi2",
+            "forced": true
+          },
+          {
+            "text": "安",
+            "reference_pinyin": "an1",
+            "confirmed_pinyin": "an1",
+            "forced": true
+          },
+          {
+            "text": "易",
+            "reference_pinyin": "yi4",
+            "confirmed_pinyin": "yi4",
+            "forced": true
+          },
+          {
+            "text": "持",
+            "reference_pinyin": "chi2",
+            "confirmed_pinyin": "chi2",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "其",
+            "reference_pinyin": "qi2",
+            "confirmed_pinyin": "qi2",
+            "forced": true
+          },
+          {
+            "text": "未",
+            "reference_pinyin": "wei4",
+            "confirmed_pinyin": "wei4",
+            "forced": true
+          },
+          {
+            "text": "兆",
+            "reference_pinyin": "zhao4",
+            "confirmed_pinyin": "zhao4",
+            "forced": true
+          },
+          {
+            "text": "易",
+            "reference_pinyin": "yi4",
+            "confirmed_pinyin": "yi4",
+            "forced": true
+          },
+          {
+            "text": "谋",
+            "reference_pinyin": "mou2",
+            "confirmed_pinyin": "mou2",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "其",
+            "reference_pinyin": "qi2",
+            "confirmed_pinyin": "qi2",
+            "forced": true
+          },
+          {
+            "text": "脆",
+            "reference_pinyin": "cui4",
+            "confirmed_pinyin": "cui4",
+            "forced": true
+          },
+          {
+            "text": "易",
+            "reference_pinyin": "yi4",
+            "confirmed_pinyin": "yi4",
+            "forced": true
+          },
+          {
+            "text": "泮",
+            "reference_pinyin": "pan4",
+            "confirmed_pinyin": "pan4",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "其",
+            "reference_pinyin": "qi2",
+            "confirmed_pinyin": "qi2",
+            "forced": true
+          },
+          {
+            "text": "微",
+            "reference_pinyin": "wei1",
+            "confirmed_pinyin": "wei1",
+            "forced": true
+          },
+          {
+            "text": "易",
+            "reference_pinyin": "yi4",
+            "confirmed_pinyin": "yi4",
+            "forced": true
+          },
+          {
+            "text": "散",
+            "reference_pinyin": "san4",
+            "confirmed_pinyin": "san4",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "为",
+            "reference_pinyin": "wei2",
+            "confirmed_pinyin": "wei2",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "于",
+            "reference_pinyin": "yu2",
+            "confirmed_pinyin": "yu2",
+            "forced": true
+          },
+          {
+            "text": "未",
+            "reference_pinyin": "wei4",
+            "confirmed_pinyin": "wei4",
+            "forced": true
+          },
+          {
+            "text": "有",
+            "reference_pinyin": "you3",
+            "confirmed_pinyin": "you3",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "治",
+            "reference_pinyin": "zhi4",
+            "confirmed_pinyin": "zhi4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "于",
+            "reference_pinyin": "yu2",
+            "confirmed_pinyin": "yu2",
+            "forced": true
+          },
+          {
+            "text": "未",
+            "reference_pinyin": "wei4",
+            "confirmed_pinyin": "wei4",
+            "forced": true
+          },
+          {
+            "text": "乱",
+            "reference_pinyin": "luan4",
+            "confirmed_pinyin": "luan4",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "合",
+            "reference_pinyin": "he2",
+            "confirmed_pinyin": "he2",
+            "forced": true
+          },
+          {
+            "text": "抱",
+            "reference_pinyin": "bao4",
+            "confirmed_pinyin": "bao4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "木",
+            "reference_pinyin": "mu4",
+            "confirmed_pinyin": "mu4",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "生",
+            "reference_pinyin": "sheng1",
+            "confirmed_pinyin": "sheng1",
+            "forced": true
+          },
+          {
+            "text": "于",
+            "reference_pinyin": "yu2",
+            "confirmed_pinyin": "yu2",
+            "forced": true
+          },
+          {
+            "text": "毫",
+            "reference_pinyin": "hao2",
+            "confirmed_pinyin": "hao2",
+            "forced": true
+          },
+          {
+            "text": "末",
+            "reference_pinyin": "mo4",
+            "confirmed_pinyin": "mo4",
+            "forced": true
+          },
+          {
+            "text": "；",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "九",
+            "reference_pinyin": "jiu3",
+            "confirmed_pinyin": "jiu3",
+            "forced": true
+          },
+          {
+            "text": "层",
+            "reference_pinyin": "ceng2",
+            "confirmed_pinyin": "ceng2",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "台",
+            "reference_pinyin": "tai2",
+            "confirmed_pinyin": "tai2",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "起",
+            "reference_pinyin": "qi3",
+            "confirmed_pinyin": "qi3",
+            "forced": true
+          },
+          {
+            "text": "于",
+            "reference_pinyin": "yu2",
+            "confirmed_pinyin": "yu2",
+            "forced": true
+          },
+          {
+            "text": "累",
+            "reference_pinyin": "lei3",
+            "confirmed_pinyin": "lei3",
+            "forced": true
+          },
+          {
+            "text": "土",
+            "reference_pinyin": "tu3",
+            "confirmed_pinyin": "tu3",
+            "forced": true
+          },
+          {
+            "text": "；",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "千",
+            "reference_pinyin": "qian1",
+            "confirmed_pinyin": "qian1",
+            "forced": true
+          },
+          {
+            "text": "里",
+            "reference_pinyin": "li3",
+            "confirmed_pinyin": "li3",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "行",
+            "reference_pinyin": "xing2",
+            "confirmed_pinyin": "xing2",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "始",
+            "reference_pinyin": "shi3",
+            "confirmed_pinyin": "shi3",
+            "forced": true
+          },
+          {
+            "text": "于",
+            "reference_pinyin": "yu2",
+            "confirmed_pinyin": "yu2",
+            "forced": true
+          },
+          {
+            "text": "足",
+            "reference_pinyin": "zu2",
+            "confirmed_pinyin": "zu2",
+            "forced": true
+          },
+          {
+            "text": "下",
+            "reference_pinyin": "xia4",
+            "confirmed_pinyin": "xia4",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "为",
+            "reference_pinyin": "wei2",
+            "confirmed_pinyin": "wei2",
+            "forced": true
+          },
+          {
+            "text": "者",
+            "reference_pinyin": "zhe3",
+            "confirmed_pinyin": "zhe3",
+            "forced": true
+          },
+          {
+            "text": "败",
+            "reference_pinyin": "bai4",
+            "confirmed_pinyin": "bai4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "执",
+            "reference_pinyin": "zhi2",
+            "confirmed_pinyin": "zhi2",
+            "forced": true
+          },
+          {
+            "text": "者",
+            "reference_pinyin": "zhe3",
+            "confirmed_pinyin": "zhe3",
+            "forced": true
+          },
+          {
+            "text": "失",
+            "reference_pinyin": "shi1",
+            "confirmed_pinyin": "shi1",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "是",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "以",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "圣",
+            "reference_pinyin": "sheng4",
+            "confirmed_pinyin": "sheng4",
+            "forced": true
+          },
+          {
+            "text": "人",
+            "reference_pinyin": "ren2",
+            "confirmed_pinyin": "ren2",
+            "forced": true
+          },
+          {
+            "text": "无",
+            "reference_pinyin": "wu2",
+            "confirmed_pinyin": "wu2",
+            "forced": true
+          },
+          {
+            "text": "为",
+            "reference_pinyin": "wei2",
+            "confirmed_pinyin": "wei2",
+            "forced": true
+          },
+          {
+            "text": "故",
+            "reference_pinyin": "gu4",
+            "confirmed_pinyin": "gu4",
+            "forced": true
+          },
+          {
+            "text": "无",
+            "reference_pinyin": "wu2",
+            "confirmed_pinyin": "wu2",
+            "forced": true
+          },
+          {
+            "text": "败",
+            "reference_pinyin": "bai4",
+            "confirmed_pinyin": "bai4",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "无",
+            "reference_pinyin": "wu2",
+            "confirmed_pinyin": "wu2",
+            "forced": true
+          },
+          {
+            "text": "执",
+            "reference_pinyin": "zhi2",
+            "confirmed_pinyin": "zhi2",
+            "forced": true
+          },
+          {
+            "text": "故",
+            "reference_pinyin": "gu4",
+            "confirmed_pinyin": "gu4",
+            "forced": true
+          },
+          {
+            "text": "无",
+            "reference_pinyin": "wu2",
+            "confirmed_pinyin": "wu2",
+            "forced": true
+          },
+          {
+            "text": "失",
+            "reference_pinyin": "shi1",
+            "confirmed_pinyin": "shi1",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "民",
+            "reference_pinyin": "min2",
+            "confirmed_pinyin": "min2",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "从",
+            "reference_pinyin": "cong2",
+            "confirmed_pinyin": "cong2",
+            "forced": true
+          },
+          {
+            "text": "事",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "常",
+            "reference_pinyin": "chang2",
+            "confirmed_pinyin": "chang2",
+            "forced": true
+          },
+          {
+            "text": "于",
+            "reference_pinyin": "yu2",
+            "confirmed_pinyin": "yu2",
+            "forced": true
+          },
+          {
+            "text": "几",
+            "reference_pinyin": "ji1",
+            "confirmed_pinyin": "ji1",
+            "forced": true
+          },
+          {
+            "text": "成",
+            "reference_pinyin": "cheng2",
+            "confirmed_pinyin": "cheng2",
+            "forced": true
+          },
+          {
+            "text": "而",
+            "reference_pinyin": "er2",
+            "confirmed_pinyin": "er2",
+            "forced": true
+          },
+          {
+            "text": "败",
+            "reference_pinyin": "bai4",
+            "confirmed_pinyin": "bai4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "慎",
+            "reference_pinyin": "shen4",
+            "confirmed_pinyin": "shen4",
+            "forced": true
+          },
+          {
+            "text": "终",
+            "reference_pinyin": "zhong1",
+            "confirmed_pinyin": "zhong1",
+            "forced": true
+          },
+          {
+            "text": "如",
+            "reference_pinyin": "ru2",
+            "confirmed_pinyin": "ru2",
+            "forced": true
+          },
+          {
+            "text": "始",
+            "reference_pinyin": "shi3",
+            "confirmed_pinyin": "shi3",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "则",
+            "reference_pinyin": "ze2",
+            "confirmed_pinyin": "ze2",
+            "forced": true
+          },
+          {
+            "text": "无",
+            "reference_pinyin": "wu2",
+            "confirmed_pinyin": "wu2",
+            "forced": true
+          },
+          {
+            "text": "败",
+            "reference_pinyin": "bai4",
+            "confirmed_pinyin": "bai4",
+            "forced": true
+          },
+          {
+            "text": "事",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "是",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "以",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "圣",
+            "reference_pinyin": "sheng4",
+            "confirmed_pinyin": "sheng4",
+            "forced": true
+          },
+          {
+            "text": "人",
+            "reference_pinyin": "ren2",
+            "confirmed_pinyin": "ren2",
+            "forced": true
+          },
+          {
+            "text": "欲",
+            "reference_pinyin": "yu4",
+            "confirmed_pinyin": "yu4",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu2",
+            "confirmed_pinyin": "bu2",
+            "forced": true
+          },
+          {
+            "text": "欲",
+            "reference_pinyin": "yu4",
+            "confirmed_pinyin": "yu4",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu2",
+            "confirmed_pinyin": "bu2",
+            "forced": true
+          },
+          {
+            "text": "贵",
+            "reference_pinyin": "gui4",
+            "confirmed_pinyin": "gui4",
+            "forced": true
+          },
+          {
+            "text": "难",
+            "reference_pinyin": "nan2",
+            "confirmed_pinyin": "nan2",
+            "forced": true
+          },
+          {
+            "text": "得",
+            "reference_pinyin": "de2",
+            "confirmed_pinyin": "de2",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "货",
+            "reference_pinyin": "huo4",
+            "confirmed_pinyin": "huo4",
+            "forced": true
+          },
+          {
+            "text": "；",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "学",
+            "reference_pinyin": "xue2",
+            "confirmed_pinyin": "xue2",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu4",
+            "confirmed_pinyin": "bu4",
+            "forced": true
+          },
+          {
+            "text": "学",
+            "reference_pinyin": "xue2",
+            "confirmed_pinyin": "xue2",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "复",
+            "reference_pinyin": "fu4",
+            "confirmed_pinyin": "fu4",
+            "forced": true
+          },
+          {
+            "text": "众",
+            "reference_pinyin": "zhong4",
+            "confirmed_pinyin": "zhong4",
+            "forced": true
+          },
+          {
+            "text": "人",
+            "reference_pinyin": "ren2",
+            "confirmed_pinyin": "ren2",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "所",
+            "reference_pinyin": "suo3",
+            "confirmed_pinyin": "suo3",
+            "forced": true
+          },
+          {
+            "text": "过",
+            "reference_pinyin": "guo4",
+            "confirmed_pinyin": "guo4",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "以",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "辅",
+            "reference_pinyin": "fu3",
+            "confirmed_pinyin": "fu3",
+            "forced": true
+          },
+          {
+            "text": "万",
+            "reference_pinyin": "wan4",
+            "confirmed_pinyin": "wan4",
+            "forced": true
+          },
+          {
+            "text": "物",
+            "reference_pinyin": "wu4",
+            "confirmed_pinyin": "wu4",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "自",
+            "reference_pinyin": "zi4",
+            "confirmed_pinyin": "zi4",
+            "forced": true
+          },
+          {
+            "text": "然",
+            "reference_pinyin": "ran2",
+            "confirmed_pinyin": "ran2",
+            "forced": true
+          },
+          {
+            "text": "而",
+            "reference_pinyin": "er2",
+            "confirmed_pinyin": "er2",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu4",
+            "confirmed_pinyin": "bu4",
+            "forced": true
+          },
+          {
+            "text": "敢",
+            "reference_pinyin": "gan3",
+            "confirmed_pinyin": "gan3",
+            "forced": true
+          },
+          {
+            "text": "为",
+            "reference_pinyin": "wei2",
+            "confirmed_pinyin": "wei2",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          }
+        ],
+        "tts_actual": [
+          {
+            "text": "其",
+            "pinyin": "qi2",
+            "begin_ms": 34,
+            "end_ms": 348
+          },
+          {
+            "text": "安",
+            "pinyin": "an1",
+            "begin_ms": 348,
+            "end_ms": 510
+          },
+          {
+            "text": "易",
+            "pinyin": "yi4",
+            "begin_ms": 510,
+            "end_ms": 708
+          },
+          {
+            "text": "持",
+            "pinyin": "chi2",
+            "begin_ms": 708,
+            "end_ms": 1091
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 1091,
+            "end_ms": 1265
+          },
+          {
+            "text": "其",
+            "pinyin": "qi2",
+            "begin_ms": 1265,
+            "end_ms": 1695
+          },
+          {
+            "text": "未",
+            "pinyin": "wei4",
+            "begin_ms": 1695,
+            "end_ms": 1857
+          },
+          {
+            "text": "兆",
+            "pinyin": "zhao4",
+            "begin_ms": 1857,
+            "end_ms": 2078
+          },
+          {
+            "text": "易",
+            "pinyin": "yi4",
+            "begin_ms": 2078,
+            "end_ms": 2240
+          },
+          {
+            "text": "谋",
+            "pinyin": "mou2",
+            "begin_ms": 2240,
+            "end_ms": 2554
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 2554,
+            "end_ms": 2612
+          },
+          {
+            "text": "其",
+            "pinyin": "qi2",
+            "begin_ms": 2981,
+            "end_ms": 3317
+          },
+          {
+            "text": "脆",
+            "pinyin": "cui4",
+            "begin_ms": 3317,
+            "end_ms": 3538
+          },
+          {
+            "text": "易",
+            "pinyin": "yi4",
+            "begin_ms": 3538,
+            "end_ms": 3666
+          },
+          {
+            "text": "泮",
+            "pinyin": "pan4",
+            "begin_ms": 3666,
+            "end_ms": 4049
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 4049,
+            "end_ms": 4223
+          },
+          {
+            "text": "其",
+            "pinyin": "qi2",
+            "begin_ms": 4223,
+            "end_ms": 4560
+          },
+          {
+            "text": "微",
+            "pinyin": "wei1",
+            "begin_ms": 4560,
+            "end_ms": 4722
+          },
+          {
+            "text": "易",
+            "pinyin": "yi4",
+            "begin_ms": 4722,
+            "end_ms": 4885
+          },
+          {
+            "text": "散",
+            "pinyin": "san4",
+            "begin_ms": 4885,
+            "end_ms": 5175
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 5175,
+            "end_ms": 5245
+          },
+          {
+            "text": "为",
+            "pinyin": "wei2",
+            "begin_ms": 5870,
+            "end_ms": 6126
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 6126,
+            "end_ms": 6323
+          },
+          {
+            "text": "于",
+            "pinyin": "yv2",
+            "begin_ms": 6323,
+            "end_ms": 6509
+          },
+          {
+            "text": "未",
+            "pinyin": "wei4",
+            "begin_ms": 6509,
+            "end_ms": 6695
+          },
+          {
+            "text": "有",
+            "pinyin": "you3",
+            "begin_ms": 6695,
+            "end_ms": 6985
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 6985,
+            "end_ms": 7159
+          },
+          {
+            "text": "治",
+            "pinyin": "zhi4",
+            "begin_ms": 7159,
+            "end_ms": 7484
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 7484,
+            "end_ms": 7693
+          },
+          {
+            "text": "于",
+            "pinyin": "yv2",
+            "begin_ms": 7693,
+            "end_ms": 7879
+          },
+          {
+            "text": "未",
+            "pinyin": "wei4",
+            "begin_ms": 7879,
+            "end_ms": 8076
+          },
+          {
+            "text": "乱",
+            "pinyin": "luan4",
+            "begin_ms": 8076,
+            "end_ms": 8332
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 8332,
+            "end_ms": 8413
+          },
+          {
+            "text": "合",
+            "pinyin": "he2",
+            "begin_ms": 9149,
+            "end_ms": 9474
+          },
+          {
+            "text": "抱",
+            "pinyin": "bao4",
+            "begin_ms": 9474,
+            "end_ms": 9660
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 9660,
+            "end_ms": 9834
+          },
+          {
+            "text": "木",
+            "pinyin": "mu4",
+            "begin_ms": 9834,
+            "end_ms": 10113
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 10113,
+            "end_ms": 10299
+          },
+          {
+            "text": "生",
+            "pinyin": "sheng1",
+            "begin_ms": 10299,
+            "end_ms": 10717
+          },
+          {
+            "text": "于",
+            "pinyin": "yv2",
+            "begin_ms": 10717,
+            "end_ms": 10891
+          },
+          {
+            "text": "毫",
+            "pinyin": "hao2",
+            "begin_ms": 10891,
+            "end_ms": 11204
+          },
+          {
+            "text": "末",
+            "pinyin": "mo4",
+            "begin_ms": 11204,
+            "end_ms": 11448
+          },
+          {
+            "text": "；",
+            "pinyin": "PPP",
+            "begin_ms": 11448,
+            "end_ms": 11541
+          },
+          {
+            "text": "九",
+            "pinyin": "jiu3",
+            "begin_ms": 11956,
+            "end_ms": 12258
+          },
+          {
+            "text": "层",
+            "pinyin": "ceng2",
+            "begin_ms": 12258,
+            "end_ms": 12444
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 12444,
+            "end_ms": 12618
+          },
+          {
+            "text": "台",
+            "pinyin": "tai2",
+            "begin_ms": 12618,
+            "end_ms": 13036
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 13036,
+            "end_ms": 13222
+          },
+          {
+            "text": "起",
+            "pinyin": "qi3",
+            "begin_ms": 13222,
+            "end_ms": 13535
+          },
+          {
+            "text": "于",
+            "pinyin": "yv2",
+            "begin_ms": 13535,
+            "end_ms": 13721
+          },
+          {
+            "text": "累",
+            "pinyin": "lei2",
+            "begin_ms": 13721,
+            "end_ms": 13930
+          },
+          {
+            "text": "土",
+            "pinyin": "tu3",
+            "begin_ms": 13930,
+            "end_ms": 14220
+          },
+          {
+            "text": "；",
+            "pinyin": "PPP",
+            "begin_ms": 14220,
+            "end_ms": 14313
+          },
+          {
+            "text": "千",
+            "pinyin": "qian1",
+            "begin_ms": 14717,
+            "end_ms": 15030
+          },
+          {
+            "text": "里",
+            "pinyin": "li3",
+            "begin_ms": 15030,
+            "end_ms": 15228
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 15228,
+            "end_ms": 15390
+          },
+          {
+            "text": "行",
+            "pinyin": "xing2",
+            "begin_ms": 15390,
+            "end_ms": 15785
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 15785,
+            "end_ms": 15959
+          },
+          {
+            "text": "始",
+            "pinyin": "shi3",
+            "begin_ms": 15959,
+            "end_ms": 16307
+          },
+          {
+            "text": "于",
+            "pinyin": "yv2",
+            "begin_ms": 16307,
+            "end_ms": 16481
+          },
+          {
+            "text": "足",
+            "pinyin": "zu2",
+            "begin_ms": 16481,
+            "end_ms": 16714
+          },
+          {
+            "text": "下",
+            "pinyin": "xia4",
+            "begin_ms": 16714,
+            "end_ms": 17015
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 17015,
+            "end_ms": 17085
+          },
+          {
+            "text": "为",
+            "pinyin": "wei2",
+            "begin_ms": 17912,
+            "end_ms": 18214
+          },
+          {
+            "text": "者",
+            "pinyin": "zhe3",
+            "begin_ms": 18214,
+            "end_ms": 18423
+          },
+          {
+            "text": "败",
+            "pinyin": "bai4",
+            "begin_ms": 18423,
+            "end_ms": 18655
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 18655,
+            "end_ms": 19003
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 19003,
+            "end_ms": 19189
+          },
+          {
+            "text": "执",
+            "pinyin": "zhi2",
+            "begin_ms": 19189,
+            "end_ms": 19398
+          },
+          {
+            "text": "者",
+            "pinyin": "zhe3",
+            "begin_ms": 19398,
+            "end_ms": 19595
+          },
+          {
+            "text": "失",
+            "pinyin": "shi1",
+            "begin_ms": 19595,
+            "end_ms": 19804
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 19804,
+            "end_ms": 20083
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 20083,
+            "end_ms": 20164
+          },
+          {
+            "text": "是",
+            "pinyin": "shi4",
+            "begin_ms": 20839,
+            "end_ms": 21129
+          },
+          {
+            "text": "以",
+            "pinyin": "yi3",
+            "begin_ms": 21129,
+            "end_ms": 21303
+          },
+          {
+            "text": "圣",
+            "pinyin": "sheng4",
+            "begin_ms": 21303,
+            "end_ms": 21524
+          },
+          {
+            "text": "人",
+            "pinyin": "ren2",
+            "begin_ms": 21524,
+            "end_ms": 21733
+          },
+          {
+            "text": "无",
+            "pinyin": "wu2",
+            "begin_ms": 21733,
+            "end_ms": 21907
+          },
+          {
+            "text": "为",
+            "pinyin": "wei2",
+            "begin_ms": 21907,
+            "end_ms": 22069
+          },
+          {
+            "text": "故",
+            "pinyin": "gu4",
+            "begin_ms": 22069,
+            "end_ms": 22267
+          },
+          {
+            "text": "无",
+            "pinyin": "wu2",
+            "begin_ms": 22267,
+            "end_ms": 22464
+          },
+          {
+            "text": "败",
+            "pinyin": "bai4",
+            "begin_ms": 22464,
+            "end_ms": 22754
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 22754,
+            "end_ms": 22928
+          },
+          {
+            "text": "无",
+            "pinyin": "wu2",
+            "begin_ms": 22928,
+            "end_ms": 23311
+          },
+          {
+            "text": "执",
+            "pinyin": "zhi2",
+            "begin_ms": 23311,
+            "end_ms": 23474
+          },
+          {
+            "text": "故",
+            "pinyin": "gu4",
+            "begin_ms": 23474,
+            "end_ms": 23660
+          },
+          {
+            "text": "无",
+            "pinyin": "wu2",
+            "begin_ms": 23660,
+            "end_ms": 23822
+          },
+          {
+            "text": "失",
+            "pinyin": "shi1",
+            "begin_ms": 23822,
+            "end_ms": 24147
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 24147,
+            "end_ms": 24229
+          },
+          {
+            "text": "民",
+            "pinyin": "min2",
+            "begin_ms": 24846,
+            "end_ms": 25113
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 25113,
+            "end_ms": 25310
+          },
+          {
+            "text": "从",
+            "pinyin": "cong2",
+            "begin_ms": 25310,
+            "end_ms": 25566
+          },
+          {
+            "text": "事",
+            "pinyin": "shi4",
+            "begin_ms": 25566,
+            "end_ms": 25868
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 25868,
+            "end_ms": 26065
+          },
+          {
+            "text": "常",
+            "pinyin": "chang2",
+            "begin_ms": 26065,
+            "end_ms": 26599
+          },
+          {
+            "text": "于",
+            "pinyin": "yv2",
+            "begin_ms": 26599,
+            "end_ms": 26820
+          },
+          {
+            "text": "几",
+            "pinyin": "ji1",
+            "begin_ms": 26820,
+            "end_ms": 27063
+          },
+          {
+            "text": "成",
+            "pinyin": "cheng2",
+            "begin_ms": 27063,
+            "end_ms": 27296
+          },
+          {
+            "text": "而",
+            "pinyin": "er2",
+            "begin_ms": 27296,
+            "end_ms": 27423
+          },
+          {
+            "text": "败",
+            "pinyin": "bai4",
+            "begin_ms": 27423,
+            "end_ms": 27656
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 27656,
+            "end_ms": 27923
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 27923,
+            "end_ms": 28004
+          },
+          {
+            "text": "慎",
+            "pinyin": "shen4",
+            "begin_ms": 28546,
+            "end_ms": 28801
+          },
+          {
+            "text": "终",
+            "pinyin": "zhong1",
+            "begin_ms": 28801,
+            "end_ms": 29068
+          },
+          {
+            "text": "如",
+            "pinyin": "ru2",
+            "begin_ms": 29068,
+            "end_ms": 29289
+          },
+          {
+            "text": "始",
+            "pinyin": "shi3",
+            "begin_ms": 29289,
+            "end_ms": 29660
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 29660,
+            "end_ms": 29846
+          },
+          {
+            "text": "则",
+            "pinyin": "ze2",
+            "begin_ms": 29846,
+            "end_ms": 30171
+          },
+          {
+            "text": "无",
+            "pinyin": "wu2",
+            "begin_ms": 30171,
+            "end_ms": 30345
+          },
+          {
+            "text": "败",
+            "pinyin": "bai4",
+            "begin_ms": 30345,
+            "end_ms": 30578
+          },
+          {
+            "text": "事",
+            "pinyin": "shi4",
+            "begin_ms": 30578,
+            "end_ms": 30880
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 30880,
+            "end_ms": 30961
+          },
+          {
+            "text": "是",
+            "pinyin": "shi4",
+            "begin_ms": 31615,
+            "end_ms": 31893
+          },
+          {
+            "text": "以",
+            "pinyin": "yi3",
+            "begin_ms": 31893,
+            "end_ms": 32067
+          },
+          {
+            "text": "圣",
+            "pinyin": "sheng4",
+            "begin_ms": 32067,
+            "end_ms": 32300
+          },
+          {
+            "text": "人",
+            "pinyin": "ren2",
+            "begin_ms": 32300,
+            "end_ms": 32497
+          },
+          {
+            "text": "欲",
+            "pinyin": "yv4",
+            "begin_ms": 32497,
+            "end_ms": 32671
+          },
+          {
+            "text": "不",
+            "pinyin": "bu2",
+            "begin_ms": 32671,
+            "end_ms": 32880
+          },
+          {
+            "text": "欲",
+            "pinyin": "yv4",
+            "begin_ms": 32880,
+            "end_ms": 33135
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 33135,
+            "end_ms": 33310
+          },
+          {
+            "text": "不",
+            "pinyin": "bu2",
+            "begin_ms": 33310,
+            "end_ms": 33670
+          },
+          {
+            "text": "贵",
+            "pinyin": "gui4",
+            "begin_ms": 33670,
+            "end_ms": 33878
+          },
+          {
+            "text": "难",
+            "pinyin": "nan2",
+            "begin_ms": 33878,
+            "end_ms": 34064
+          },
+          {
+            "text": "得",
+            "pinyin": "de2",
+            "begin_ms": 34064,
+            "end_ms": 34296
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 34296,
+            "end_ms": 34424
+          },
+          {
+            "text": "货",
+            "pinyin": "huo4",
+            "begin_ms": 34424,
+            "end_ms": 34691
+          },
+          {
+            "text": "；",
+            "pinyin": "PPP",
+            "begin_ms": 34691,
+            "end_ms": 34784
+          },
+          {
+            "text": "学",
+            "pinyin": "xve2",
+            "begin_ms": 35188,
+            "end_ms": 35479
+          },
+          {
+            "text": "不",
+            "pinyin": "bu4",
+            "begin_ms": 35479,
+            "end_ms": 35618
+          },
+          {
+            "text": "学",
+            "pinyin": "xve2",
+            "begin_ms": 35618,
+            "end_ms": 35978
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 35978,
+            "end_ms": 36164
+          },
+          {
+            "text": "复",
+            "pinyin": "fu4",
+            "begin_ms": 36164,
+            "end_ms": 36570
+          },
+          {
+            "text": "众",
+            "pinyin": "zhong4",
+            "begin_ms": 36570,
+            "end_ms": 36756
+          },
+          {
+            "text": "人",
+            "pinyin": "ren2",
+            "begin_ms": 36756,
+            "end_ms": 36895
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 36895,
+            "end_ms": 37069
+          },
+          {
+            "text": "所",
+            "pinyin": "suo3",
+            "begin_ms": 37069,
+            "end_ms": 37336
+          },
+          {
+            "text": "过",
+            "pinyin": "guo4",
+            "begin_ms": 37336,
+            "end_ms": 37626
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 37626,
+            "end_ms": 37812
+          },
+          {
+            "text": "以",
+            "pinyin": "yi2",
+            "begin_ms": 37812,
+            "end_ms": 38207
+          },
+          {
+            "text": "辅",
+            "pinyin": "fu3",
+            "begin_ms": 38207,
+            "end_ms": 38439
+          },
+          {
+            "text": "万",
+            "pinyin": "wan4",
+            "begin_ms": 38439,
+            "end_ms": 38625
+          },
+          {
+            "text": "物",
+            "pinyin": "wu4",
+            "begin_ms": 38625,
+            "end_ms": 38799
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 38799,
+            "end_ms": 38950
+          },
+          {
+            "text": "自",
+            "pinyin": "zi4",
+            "begin_ms": 38950,
+            "end_ms": 39136
+          },
+          {
+            "text": "然",
+            "pinyin": "ran2",
+            "begin_ms": 39136,
+            "end_ms": 39333
+          },
+          {
+            "text": "而",
+            "pinyin": "er2",
+            "begin_ms": 39333,
+            "end_ms": 39461
+          },
+          {
+            "text": "不",
+            "pinyin": "bu4",
+            "begin_ms": 39461,
+            "end_ms": 39612
+          },
+          {
+            "text": "敢",
+            "pinyin": "gan3",
+            "begin_ms": 39612,
+            "end_ms": 39821
+          },
+          {
+            "text": "为",
+            "pinyin": "wei2",
+            "begin_ms": 39821,
+            "end_ms": 40134
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 40134,
+            "end_ms": 40181
+          },
+          {
+            "text": "",
+            "pinyin": "SIL",
+            "begin_ms": 40181,
+            "end_ms": 40903
+          }
+        ]
+      }
+    }
+  ]
+}

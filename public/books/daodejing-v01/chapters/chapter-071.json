@@ -1,0 +1,444 @@
+{
+  "id": "01a1ed46-51e7-7773-8f2a-e2916521848b",
+  "order": 71,
+  "title": "第71章",
+  "collection": null,
+  "subtitle": null,
+  "audio": {
+    "src": "audio/chapter-071.mp3",
+    "duration_ms": 9630,
+    "format": "mp3"
+  },
+  "segments": [
+    {
+      "id": "01a1ed46-51e7-7773-8f2a-e29257df2ee9",
+      "order": 1,
+      "text": "知不知，尚矣；不知知，病也。是以圣人之不病也，以其病病也，是以不病。",
+      "translation": null,
+      "speak_enabled": true,
+      "start_ms": 0,
+      "end_ms": 9626,
+      "duration_ms": 9626,
+      "pronunciation": {
+        "tokens": [
+          {
+            "text": "知",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu4",
+            "confirmed_pinyin": "bu4",
+            "forced": true
+          },
+          {
+            "text": "知",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "尚",
+            "reference_pinyin": "shang4",
+            "confirmed_pinyin": "shang4",
+            "forced": true
+          },
+          {
+            "text": "矣",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "；",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu4",
+            "confirmed_pinyin": "bu4",
+            "forced": true
+          },
+          {
+            "text": "知",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "知",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "病",
+            "reference_pinyin": "bing4",
+            "confirmed_pinyin": "bing4",
+            "forced": true
+          },
+          {
+            "text": "也",
+            "reference_pinyin": "ye3",
+            "confirmed_pinyin": "ye3",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "是",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "以",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "圣",
+            "reference_pinyin": "sheng4",
+            "confirmed_pinyin": "sheng4",
+            "forced": true
+          },
+          {
+            "text": "人",
+            "reference_pinyin": "ren2",
+            "confirmed_pinyin": "ren2",
+            "forced": true
+          },
+          {
+            "text": "之",
+            "reference_pinyin": "zhi1",
+            "confirmed_pinyin": "zhi1",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu2",
+            "confirmed_pinyin": "bu2",
+            "forced": true
+          },
+          {
+            "text": "病",
+            "reference_pinyin": "bing4",
+            "confirmed_pinyin": "bing4",
+            "forced": true
+          },
+          {
+            "text": "也",
+            "reference_pinyin": "ye3",
+            "confirmed_pinyin": "ye3",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "以",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "其",
+            "reference_pinyin": "qi2",
+            "confirmed_pinyin": "qi2",
+            "forced": true
+          },
+          {
+            "text": "病",
+            "reference_pinyin": "bing4",
+            "confirmed_pinyin": "bing4",
+            "forced": true
+          },
+          {
+            "text": "病",
+            "reference_pinyin": "bing4",
+            "confirmed_pinyin": "bing4",
+            "forced": true
+          },
+          {
+            "text": "也",
+            "reference_pinyin": "ye3",
+            "confirmed_pinyin": "ye3",
+            "forced": true
+          },
+          {
+            "text": "，",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          },
+          {
+            "text": "是",
+            "reference_pinyin": "shi4",
+            "confirmed_pinyin": "shi4",
+            "forced": true
+          },
+          {
+            "text": "以",
+            "reference_pinyin": "yi3",
+            "confirmed_pinyin": "yi3",
+            "forced": true
+          },
+          {
+            "text": "不",
+            "reference_pinyin": "bu2",
+            "confirmed_pinyin": "bu2",
+            "forced": true
+          },
+          {
+            "text": "病",
+            "reference_pinyin": "bing4",
+            "confirmed_pinyin": "bing4",
+            "forced": true
+          },
+          {
+            "text": "。",
+            "reference_pinyin": null,
+            "confirmed_pinyin": null,
+            "forced": false
+          }
+        ],
+        "tts_actual": [
+          {
+            "text": "知",
+            "pinyin": "zhi1",
+            "begin_ms": 34,
+            "end_ms": 301
+          },
+          {
+            "text": "不",
+            "pinyin": "bu4",
+            "begin_ms": 301,
+            "end_ms": 487
+          },
+          {
+            "text": "知",
+            "pinyin": "zhi1",
+            "begin_ms": 487,
+            "end_ms": 789
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 789,
+            "end_ms": 963
+          },
+          {
+            "text": "尚",
+            "pinyin": "shang4",
+            "begin_ms": 963,
+            "end_ms": 1393
+          },
+          {
+            "text": "矣",
+            "pinyin": "yi3",
+            "begin_ms": 1393,
+            "end_ms": 1625
+          },
+          {
+            "text": "；",
+            "pinyin": "PPP",
+            "begin_ms": 1625,
+            "end_ms": 1729
+          },
+          {
+            "text": "不",
+            "pinyin": "bu4",
+            "begin_ms": 2259,
+            "end_ms": 2514
+          },
+          {
+            "text": "知",
+            "pinyin": "zhi1",
+            "begin_ms": 2514,
+            "end_ms": 2665
+          },
+          {
+            "text": "知",
+            "pinyin": "zhi1",
+            "begin_ms": 2665,
+            "end_ms": 3014
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 3014,
+            "end_ms": 3176
+          },
+          {
+            "text": "病",
+            "pinyin": "bing4",
+            "begin_ms": 3176,
+            "end_ms": 3443
+          },
+          {
+            "text": "也",
+            "pinyin": "ye3",
+            "begin_ms": 3443,
+            "end_ms": 3768
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 3768,
+            "end_ms": 3815
+          },
+          {
+            "text": "是",
+            "pinyin": "shi4",
+            "begin_ms": 4565,
+            "end_ms": 4843
+          },
+          {
+            "text": "以",
+            "pinyin": "yi3",
+            "begin_ms": 4843,
+            "end_ms": 5006
+          },
+          {
+            "text": "圣",
+            "pinyin": "sheng4",
+            "begin_ms": 5006,
+            "end_ms": 5226
+          },
+          {
+            "text": "人",
+            "pinyin": "ren2",
+            "begin_ms": 5226,
+            "end_ms": 5389
+          },
+          {
+            "text": "之",
+            "pinyin": "zhi1",
+            "begin_ms": 5389,
+            "end_ms": 5575
+          },
+          {
+            "text": "不",
+            "pinyin": "bu2",
+            "begin_ms": 5575,
+            "end_ms": 5726
+          },
+          {
+            "text": "病",
+            "pinyin": "bing4",
+            "begin_ms": 5726,
+            "end_ms": 5923
+          },
+          {
+            "text": "也",
+            "pinyin": "ye3",
+            "begin_ms": 5923,
+            "end_ms": 6225
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 6225,
+            "end_ms": 6399
+          },
+          {
+            "text": "以",
+            "pinyin": "yi3",
+            "begin_ms": 6399,
+            "end_ms": 6747
+          },
+          {
+            "text": "其",
+            "pinyin": "qi2",
+            "begin_ms": 6747,
+            "end_ms": 6945
+          },
+          {
+            "text": "病",
+            "pinyin": "bing4",
+            "begin_ms": 6945,
+            "end_ms": 7119
+          },
+          {
+            "text": "病",
+            "pinyin": "bing4",
+            "begin_ms": 7119,
+            "end_ms": 7351
+          },
+          {
+            "text": "也",
+            "pinyin": "ye3",
+            "begin_ms": 7351,
+            "end_ms": 7653
+          },
+          {
+            "text": "，",
+            "pinyin": "PPP",
+            "begin_ms": 7653,
+            "end_ms": 7827
+          },
+          {
+            "text": "是",
+            "pinyin": "shi4",
+            "begin_ms": 7827,
+            "end_ms": 8140
+          },
+          {
+            "text": "以",
+            "pinyin": "yi3",
+            "begin_ms": 8140,
+            "end_ms": 8291
+          },
+          {
+            "text": "不",
+            "pinyin": "bu2",
+            "begin_ms": 8291,
+            "end_ms": 8489
+          },
+          {
+            "text": "病",
+            "pinyin": "bing4",
+            "begin_ms": 8489,
+            "end_ms": 8686
+          },
+          {
+            "text": "。",
+            "pinyin": "PPP",
+            "begin_ms": 8686,
+            "end_ms": 8825
+          },
+          {
+            "text": "",
+            "pinyin": "SIL",
+            "begin_ms": 8825,
+            "end_ms": 9626
+          }
+        ]
+      }
+    }
+  ]
+}

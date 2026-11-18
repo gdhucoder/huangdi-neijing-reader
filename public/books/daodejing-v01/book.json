@@ -1,0 +1,583 @@
+{
+  "id": "daodejing-v01",
+  "title": "道德经",
+  "author": "老子",
+  "dynasty": "先秦",
+  "edition": null,
+  "language": "zh-CN",
+  "reading_mode": "modern_standard_mandarin",
+  "subtitle": "老子 · 原文 · 注音 · 朗读",
+  "description": "《道德经》八十一章，配有注音、朗读与白话解释。",
+  "audio": {
+    "format": "mp3"
+  },
+  "chapters": [
+    {
+      "id": "01a1ed42-c48f-75fd-b8a2-bbd35ff0c823",
+      "order": 1,
+      "title": "第1章",
+      "content": "chapters/chapter-001.json",
+      "audio": "audio/chapter-001.mp3"
+    },
+    {
+      "id": "01a1ed42-c494-71c8-bf7c-c079d8f7904a",
+      "order": 2,
+      "title": "第2章",
+      "content": "chapters/chapter-002.json",
+      "audio": "audio/chapter-002.mp3"
+    },
+    {
+      "id": "01a1ed42-c499-76e7-abb0-971d90393e3a",
+      "order": 3,
+      "title": "第3章",
+      "content": "chapters/chapter-003.json",
+      "audio": "audio/chapter-003.mp3"
+    },
+    {
+      "id": "01a1ed42-c49c-776f-a8c9-760e0f864470",
+      "order": 4,
+      "title": "第4章",
+      "content": "chapters/chapter-004.json",
+      "audio": "audio/chapter-004.mp3"
+    },
+    {
+      "id": "01a1ed42-c49e-750c-9606-92070811de60",
+      "order": 5,
+      "title": "第5章",
+      "content": "chapters/chapter-005.json",
+      "audio": "audio/chapter-005.mp3"
+    },
+    {
+      "id": "01a1ed42-c4a0-77b2-a8b2-c2757afe6524",
+      "order": 6,
+      "title": "第6章",
+      "content": "chapters/chapter-006.json",
+      "audio": "audio/chapter-006.mp3"
+    },
+    {
+      "id": "01a1ed42-c4a1-7710-a7d8-5693e577208b",
+      "order": 7,
+      "title": "第7章",
+      "content": "chapters/chapter-007.json",
+      "audio": "audio/chapter-007.mp3"
+    },
+    {
+      "id": "01a1ed42-c4a3-7481-9e57-5873c0a14a0d",
+      "order": 8,
+      "title": "第8章",
+      "content": "chapters/chapter-008.json",
+      "audio": "audio/chapter-008.mp3"
+    },
+    {
+      "id": "01a1ed42-c4a4-74b1-8e66-02cebb3bdafd",
+      "order": 9,
+      "title": "第9章",
+      "content": "chapters/chapter-009.json",
+      "audio": "audio/chapter-009.mp3"
+    },
+    {
+      "id": "01a1ed42-c4a6-70e8-8f7f-4a5d990acc03",
+      "order": 10,
+      "title": "第10章",
+      "content": "chapters/chapter-010.json",
+      "audio": "audio/chapter-010.mp3"
+    },
+    {
+      "id": "01a1ed42-c4a8-7658-9a50-7be1cc6169f5",
+      "order": 11,
+      "title": "第11章",
+      "content": "chapters/chapter-011.json",
+      "audio": "audio/chapter-011.mp3"
+    },
+    {
+      "id": "01a1ed42-c4aa-72e1-b770-54c180c8f5e7",
+      "order": 12,
+      "title": "第12章",
+      "content": "chapters/chapter-012.json",
+      "audio": "audio/chapter-012.mp3"
+    },
+    {
+      "id": "01a1ed42-c4ab-736c-bebe-1b8fd99d3b5b",
+      "order": 13,
+      "title": "第13章",
+      "content": "chapters/chapter-013.json",
+      "audio": "audio/chapter-013.mp3"
+    },
+    {
+      "id": "01a1ed42-c4ae-72a9-bab5-42646f045385",
+      "order": 14,
+      "title": "第14章",
+      "content": "chapters/chapter-014.json",
+      "audio": "audio/chapter-014.mp3"
+    },
+    {
+      "id": "01a1ed42-c4b1-7492-b152-d4cdc085c27c",
+      "order": 15,
+      "title": "第15章",
+      "content": "chapters/chapter-015.json",
+      "audio": "audio/chapter-015.mp3"
+    },
+    {
+      "id": "01a1ed42-c4b4-777d-9f70-0be3ee325b71",
+      "order": 16,
+      "title": "第16章",
+      "content": "chapters/chapter-016.json",
+      "audio": "audio/chapter-016.mp3"
+    },
+    {
+      "id": "01a1ed42-c4b6-70c8-b353-bdc677e84548",
+      "order": 17,
+      "title": "第17章",
+      "content": "chapters/chapter-017.json",
+      "audio": "audio/chapter-017.mp3"
+    },
+    {
+      "id": "01a1ed42-c4b7-75c7-92e3-535133919e93",
+      "order": 18,
+      "title": "第18章",
+      "content": "chapters/chapter-018.json",
+      "audio": "audio/chapter-018.mp3"
+    },
+    {
+      "id": "01a1ed42-c4b8-7425-b61c-2f53fa3cb190",
+      "order": 19,
+      "title": "第19章",
+      "content": "chapters/chapter-019.json",
+      "audio": "audio/chapter-019.mp3"
+    },
+    {
+      "id": "01a1ed42-c4ba-711d-955f-7eaa3f475232",
+      "order": 20,
+      "title": "第20章",
+      "content": "chapters/chapter-020.json",
+      "audio": "audio/chapter-020.mp3"
+    },
+    {
+      "id": "01a1ed44-449c-7314-b4ae-a0777febe8f8",
+      "order": 21,
+      "title": "第21章",
+      "content": "chapters/chapter-021.json",
+      "audio": "audio/chapter-021.mp3"
+    },
+    {
+      "id": "01a1ed44-44a1-7172-b4ed-6f676a64353e",
+      "order": 22,
+      "title": "第22章",
+      "content": "chapters/chapter-022.json",
+      "audio": "audio/chapter-022.mp3"
+    },
+    {
+      "id": "01a1ed44-44a5-73ab-8b6c-d8df2c955526",
+      "order": 23,
+      "title": "第23章",
+      "content": "chapters/chapter-023.json",
+      "audio": "audio/chapter-023.mp3"
+    },
+    {
+      "id": "01a1ed44-44aa-70f5-91d0-d3491aa78896",
+      "order": 24,
+      "title": "第24章",
+      "content": "chapters/chapter-024.json",
+      "audio": "audio/chapter-024.mp3"
+    },
+    {
+      "id": "01a1ed44-44ac-74c0-b72d-08256433f373",
+      "order": 25,
+      "title": "第25章",
+      "content": "chapters/chapter-025.json",
+      "audio": "audio/chapter-025.mp3"
+    },
+    {
+      "id": "01a1ed44-44af-7184-a308-ddb2b4481128",
+      "order": 26,
+      "title": "第26章",
+      "content": "chapters/chapter-026.json",
+      "audio": "audio/chapter-026.mp3"
+    },
+    {
+      "id": "01a1ed44-44b1-7617-8eb0-7748b3cb9800",
+      "order": 27,
+      "title": "第27章",
+      "content": "chapters/chapter-027.json",
+      "audio": "audio/chapter-027.mp3"
+    },
+    {
+      "id": "01a1ed44-44b4-76d7-b329-0b3fc8372cf3",
+      "order": 28,
+      "title": "第28章",
+      "content": "chapters/chapter-028.json",
+      "audio": "audio/chapter-028.mp3"
+    },
+    {
+      "id": "01a1ed44-44b7-7745-856e-8d1d1ad01847",
+      "order": 29,
+      "title": "第29章",
+      "content": "chapters/chapter-029.json",
+      "audio": "audio/chapter-029.mp3"
+    },
+    {
+      "id": "01a1ed44-44b9-77c7-a93c-acee7e4ce226",
+      "order": 30,
+      "title": "第30章",
+      "content": "chapters/chapter-030.json",
+      "audio": "audio/chapter-030.mp3"
+    },
+    {
+      "id": "01a1ed44-44bc-71c1-a741-26e2622d0f8d",
+      "order": 31,
+      "title": "第31章",
+      "content": "chapters/chapter-031.json",
+      "audio": "audio/chapter-031.mp3"
+    },
+    {
+      "id": "01a1ed44-44bf-72d1-9548-dda4847f16c5",
+      "order": 32,
+      "title": "第32章",
+      "content": "chapters/chapter-032.json",
+      "audio": "audio/chapter-032.mp3"
+    },
+    {
+      "id": "01a1ed44-44c2-7497-ac0c-09028643e006",
+      "order": 33,
+      "title": "第33章",
+      "content": "chapters/chapter-033.json",
+      "audio": "audio/chapter-033.mp3"
+    },
+    {
+      "id": "01a1ed44-44c3-7089-ba99-626e1e5753bc",
+      "order": 34,
+      "title": "第34章",
+      "content": "chapters/chapter-034.json",
+      "audio": "audio/chapter-034.mp3"
+    },
+    {
+      "id": "01a1ed44-44c5-71bf-83e7-c4bbafe7594d",
+      "order": 35,
+      "title": "第35章",
+      "content": "chapters/chapter-035.json",
+      "audio": "audio/chapter-035.mp3"
+    },
+    {
+      "id": "01a1ed44-44c6-74fd-9b64-61084e3fcc17",
+      "order": 36,
+      "title": "第36章",
+      "content": "chapters/chapter-036.json",
+      "audio": "audio/chapter-036.mp3"
+    },
+    {
+      "id": "01a1ed44-44c8-728a-9fcb-7846a02c4ce0",
+      "order": 37,
+      "title": "第37章",
+      "content": "chapters/chapter-037.json",
+      "audio": "audio/chapter-037.mp3"
+    },
+    {
+      "id": "01a1ed44-44c9-774d-bfd4-9212e341c6aa",
+      "order": 38,
+      "title": "第38章",
+      "content": "chapters/chapter-038.json",
+      "audio": "audio/chapter-038.mp3"
+    },
+    {
+      "id": "01a1ed44-44cd-72ca-848f-e0c9e5c6ca53",
+      "order": 39,
+      "title": "第39章",
+      "content": "chapters/chapter-039.json",
+      "audio": "audio/chapter-039.mp3"
+    },
+    {
+      "id": "01a1ed44-44d1-7150-acb8-c5ce413e1aba",
+      "order": 40,
+      "title": "第40章",
+      "content": "chapters/chapter-040.json",
+      "audio": "audio/chapter-040.mp3"
+    },
+    {
+      "id": "01a1ed45-705e-70b3-a8f8-b784f26bcaaa",
+      "order": 41,
+      "title": "第41章",
+      "content": "chapters/chapter-041.json",
+      "audio": "audio/chapter-041.mp3"
+    },
+    {
+      "id": "01a1ed45-7064-73c4-ad29-7177d2fd705c",
+      "order": 42,
+      "title": "第42章",
+      "content": "chapters/chapter-042.json",
+      "audio": "audio/chapter-042.mp3"
+    },
+    {
+      "id": "01a1ed45-7068-7355-b75a-eba59ea547fa",
+      "order": 43,
+      "title": "第43章",
+      "content": "chapters/chapter-043.json",
+      "audio": "audio/chapter-043.mp3"
+    },
+    {
+      "id": "01a1ed45-706a-7203-911d-be08a7f6e1f4",
+      "order": 44,
+      "title": "第44章",
+      "content": "chapters/chapter-044.json",
+      "audio": "audio/chapter-044.mp3"
+    },
+    {
+      "id": "01a1ed45-706b-7660-b3ca-e1068040203a",
+      "order": 45,
+      "title": "第45章",
+      "content": "chapters/chapter-045.json",
+      "audio": "audio/chapter-045.mp3"
+    },
+    {
+      "id": "01a1ed45-706d-70f2-b670-3536d5833559",
+      "order": 46,
+      "title": "第46章",
+      "content": "chapters/chapter-046.json",
+      "audio": "audio/chapter-046.mp3"
+    },
+    {
+      "id": "01a1ed45-706f-77e8-8d1f-6fd50cff5b2a",
+      "order": 47,
+      "title": "第47章",
+      "content": "chapters/chapter-047.json",
+      "audio": "audio/chapter-047.mp3"
+    },
+    {
+      "id": "01a1ed45-7070-773b-815f-44946605ee4c",
+      "order": 48,
+      "title": "第48章",
+      "content": "chapters/chapter-048.json",
+      "audio": "audio/chapter-048.mp3"
+    },
+    {
+      "id": "01a1ed45-7071-72cb-853f-1fc0ac9e7362",
+      "order": 49,
+      "title": "第49章",
+      "content": "chapters/chapter-049.json",
+      "audio": "audio/chapter-049.mp3"
+    },
+    {
+      "id": "01a1ed45-7074-77f9-9982-c091f4309b7a",
+      "order": 50,
+      "title": "第50章",
+      "content": "chapters/chapter-050.json",
+      "audio": "audio/chapter-050.mp3"
+    },
+    {
+      "id": "01a1ed45-7077-7626-a9b5-f5deb88bbb6c",
+      "order": 51,
+      "title": "第51章",
+      "content": "chapters/chapter-051.json",
+      "audio": "audio/chapter-051.mp3"
+    },
+    {
+      "id": "01a1ed45-7079-771e-8b3a-cb3e7b2504f1",
+      "order": 52,
+      "title": "第52章",
+      "content": "chapters/chapter-052.json",
+      "audio": "audio/chapter-052.mp3"
+    },
+    {
+      "id": "01a1ed45-707b-75bd-8937-19b2c85e2bcf",
+      "order": 53,
+      "title": "第53章",
+      "content": "chapters/chapter-053.json",
+      "audio": "audio/chapter-053.mp3"
+    },
+    {
+      "id": "01a1ed45-707d-7705-84f3-478b2bb7427f",
+      "order": 54,
+      "title": "第54章",
+      "content": "chapters/chapter-054.json",
+      "audio": "audio/chapter-054.mp3"
+    },
+    {
+      "id": "01a1ed45-7080-70bb-ad5d-48cc6ba6090e",
+      "order": 55,
+      "title": "第55章",
+      "content": "chapters/chapter-055.json",
+      "audio": "audio/chapter-055.mp3"
+    },
+    {
+      "id": "01a1ed45-7082-74df-914f-c78513a15101",
+      "order": 56,
+      "title": "第56章",
+      "content": "chapters/chapter-056.json",
+      "audio": "audio/chapter-056.mp3"
+    },
+    {
+      "id": "01a1ed45-7085-758a-9172-d639620f7e74",
+      "order": 57,
+      "title": "第57章",
+      "content": "chapters/chapter-057.json",
+      "audio": "audio/chapter-057.mp3"
+    },
+    {
+      "id": "01a1ed45-7087-7558-a6e9-1b95b73c4945",
+      "order": 58,
+      "title": "第58章",
+      "content": "chapters/chapter-058.json",
+      "audio": "audio/chapter-058.mp3"
+    },
+    {
+      "id": "01a1ed45-7089-745e-bfab-bde7463e0351",
+      "order": 59,
+      "title": "第59章",
+      "content": "chapters/chapter-059.json",
+      "audio": "audio/chapter-059.mp3"
+    },
+    {
+      "id": "01a1ed45-708b-7635-8a58-2f5e45b3e1e5",
+      "order": 60,
+      "title": "第60章",
+      "content": "chapters/chapter-060.json",
+      "audio": "audio/chapter-060.mp3"
+    },
+    {
+      "id": "01a1ed46-51c9-721a-852e-893366df8a0b",
+      "order": 61,
+      "title": "第61章",
+      "content": "chapters/chapter-061.json",
+      "audio": "audio/chapter-061.mp3"
+    },
+    {
+      "id": "01a1ed46-51ce-77b0-8b24-f788e03cde17",
+      "order": 62,
+      "title": "第62章",
+      "content": "chapters/chapter-062.json",
+      "audio": "audio/chapter-062.mp3"
+    },
+    {
+      "id": "01a1ed46-51d2-75e5-ba50-ed3e5e11771b",
+      "order": 63,
+      "title": "第63章",
+      "content": "chapters/chapter-063.json",
+      "audio": "audio/chapter-063.mp3"
+    },
+    {
+      "id": "01a1ed46-51d5-73db-8f30-a1f7fe5a7c0e",
+      "order": 64,
+      "title": "第64章",
+      "content": "chapters/chapter-064.json",
+      "audio": "audio/chapter-064.mp3"
+    },
+    {
+      "id": "01a1ed46-51da-71f1-ad27-ecc076bf8ce2",
+      "order": 65,
+      "title": "第65章",
+      "content": "chapters/chapter-065.json",
+      "audio": "audio/chapter-065.mp3"
+    },
+    {
+      "id": "01a1ed46-51dc-7034-ba63-7f0fdf6cdc62",
+      "order": 66,
+      "title": "第66章",
+      "content": "chapters/chapter-066.json",
+      "audio": "audio/chapter-066.mp3"
+    },
+    {
+      "id": "01a1ed46-51df-716c-a381-498851242d80",
+      "order": 67,
+      "title": "第67章",
+      "content": "chapters/chapter-067.json",
+      "audio": "audio/chapter-067.mp3"
+    },
+    {
+      "id": "01a1ed46-51e2-7168-8d8b-295f609b82d5",
+      "order": 68,
+      "title": "第68章",
+      "content": "chapters/chapter-068.json",
+      "audio": "audio/chapter-068.mp3"
+    },
+    {
+      "id": "01a1ed46-51e3-7012-94c1-e9cab96f20af",
+      "order": 69,
+      "title": "第69章",
+      "content": "chapters/chapter-069.json",
+      "audio": "audio/chapter-069.mp3"
+    },
+    {
+      "id": "01a1ed46-51e5-7011-b788-f450502aecff",
+      "order": 70,
+      "title": "第70章",
+      "content": "chapters/chapter-070.json",
+      "audio": "audio/chapter-070.mp3"
+    },
+    {
+      "id": "01a1ed46-51e7-7773-8f2a-e2916521848b",
+      "order": 71,
+      "title": "第71章",
+      "content": "chapters/chapter-071.json",
+      "audio": "audio/chapter-071.mp3"
+    },
+    {
+      "id": "01a1ed46-51e7-7773-8f2a-e2aefc7d5938",
+      "order": 72,
+      "title": "第72章",
+      "content": "chapters/chapter-072.json",
+      "audio": "audio/chapter-072.mp3"
+    },
+    {
+      "id": "01a1ed46-51e9-767c-8241-783a8f30ba5d",
+      "order": 73,
+      "title": "第73章",
+      "content": "chapters/chapter-073.json",
+      "audio": "audio/chapter-073.mp3"
+    },
+    {
+      "id": "01a1ed46-51eb-746a-80c8-e8d8cbd39390",
+      "order": 74,
+      "title": "第74章",
+      "content": "chapters/chapter-074.json",
+      "audio": "audio/chapter-074.mp3"
+    },
+    {
+      "id": "01a1ed46-51ed-719a-93f9-4c3e7042f7b8",
+      "order": 75,
+      "title": "第75章",
+      "content": "chapters/chapter-075.json",
+      "audio": "audio/chapter-075.mp3"
+    },
+    {
+      "id": "01a1ed46-51ef-713d-8172-c39802f125c6",
+      "order": 76,
+      "title": "第76章",
+      "content": "chapters/chapter-076.json",
+      "audio": "audio/chapter-076.mp3"
+    },
+    {
+      "id": "01a1ed46-51f0-767c-b032-a4aacb120661",
+      "order": 77,
+      "title": "第77章",
+      "content": "chapters/chapter-077.json",
+      "audio": "audio/chapter-077.mp3"
+    },
+    {
+      "id": "01a1ed46-51f3-77f2-bbd8-3e05f9441ac4",
+      "order": 78,
+      "title": "第78章",
+      "content": "chapters/chapter-078.json",
+      "audio": "audio/chapter-078.mp3"
+    },
+    {
+      "id": "01a1ed46-51f5-70a7-a1c5-dc0bdde9db7f",
+      "order": 79,
+      "title": "第79章",
+      "content": "chapters/chapter-079.json",
+      "audio": "audio/chapter-079.mp3"
+    },
+    {
+      "id": "01a1ed46-51f6-70b9-9757-364512b34e79",
+      "order": 80,
+      "title": "第80章",
+      "content": "chapters/chapter-080.json",
+      "audio": "audio/chapter-080.mp3"
+    },
+    {
+      "id": "01a1ed46-51f8-715d-a9ef-d18d52268c15",
+      "order": 81,
+      "title": "第81章",
+      "content": "chapters/chapter-081.json",
+      "audio": "audio/chapter-081.mp3"
+    }
+  ]
+}
