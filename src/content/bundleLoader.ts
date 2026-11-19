@@ -2,12 +2,12 @@ import { appAssetUrl, contentBaseUrl, contentUrl, ensureSafeRelativePath, DEFAUL
 
 export interface RawManifest { format: string; format_version: string; book: string | { src?: string; path?: string }; chapters?: Array<{ id?: string; order?: number; src?: string; path?: string; content?: string; audio?: string }> }
 export interface RawBookChapterEntry { id: string; order?: number; collection?: string; title?: string; subtitle?: string; src?: string; path?: string; content?: string; audio?: string }
-export interface RawBook { id: string; title: string; subtitle?: string; description?: string; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: RawBookChapterEntry[] }
+export interface RawBook { id: string; title: string; subtitle?: string; description?: string; audio?: { src?: string; duration_ms?: number; durationMs?: number; format?: string; mode?: string }; sources?: Array<{ label?: string; value?: string; name?: string; text?: string }>; chapters?: RawBookChapterEntry[] }
 export interface RawCatalogEntry { id: string; path: string; title: string; subtitle?: string; description?: string }
 export interface RawCatalog { version: string; books: RawCatalogEntry[] }
 export interface RawChapter {
   id: string; order?: number; collection?: string; title: string; subtitle?: string
-  audio?: { src?: string; duration_ms?: number; durationMs?: number }
+  audio?: { src?: string; duration_ms?: number; durationMs?: number; offset_ms?: number; offsetMs?: number }
   segments: Array<{ id: string; order?: number; text: string; speakable?: boolean; speak_enabled?: boolean; start_ms?: number | null; end_ms?: number | null; startMs?: number | null; endMs?: number | null; translation?: string | null; pronunciation?: { tokens?: Array<{ text: string; pinyin?: string | null; confirmed_pinyin?: string | null; reference_pinyin?: string | null }>; tts_actual?: Array<{ text: string; pinyin?: string | null; begin_ms: number; end_ms: number }> } | Array<{ text: string; pinyin?: string | null }>; pronunciation_tokens?: Array<{ text: string; pinyin: string }> }>
 }
 export interface RawBundle { manifest: RawManifest; book: RawBook; chapters: RawChapter[]; baseUrl?: string }
@@ -36,15 +36,20 @@ export async function loadBookCatalog(): Promise<RawCatalog> {
 
 export async function loadRawBundle(root = DEFAULT_BOOK_ROOT): Promise<RawBundle> {
   const baseUrl = contentBaseUrl(root)
+  // Start a new cache entry for the book and chapters that carry audio offsets.
+  const loadContent = <T>(path: string) => fetchJson<T>(
+    root === 'daodejing-v01' ? `${path}${path.includes('?') ? '&' : '?'}v=continuous-audio-1` : path,
+    baseUrl,
+  )
   const manifest = await fetchJson<RawManifest>('manifest.json', baseUrl)
   if (manifest.format !== 'ancient-medical-publication-bundle') throw new Error('当前内容包格式暂不支持。')
   if (manifest.format_version !== '1.0') throw new Error(`当前内容包版本暂不支持：${manifest.format_version || '未知版本'}。`)
   if (!manifest.book) throw new Error('内容包缺少 book 信息。')
-  const book = await fetchJson<RawBook>(resourcePath(manifest.book), baseUrl)
+  const book = await loadContent<RawBook>(resourcePath(manifest.book))
   const entries = book.chapters ?? manifest.chapters
   if (!entries?.length) throw new Error('内容包没有可阅读的篇章。')
   const chapters = await Promise.all(entries.map(async (entry) => {
-    const chapter = await fetchJson<RawChapter>(resourcePath(entry.content ?? entry.src ?? entry.path ?? ''), baseUrl)
+    const chapter = await loadContent<RawChapter>(resourcePath(entry.content ?? entry.src ?? entry.path ?? ''))
     if (entry.id && chapter.id !== entry.id) throw new Error(`章节标识不一致：${entry.id}。`)
     if (entry.order !== undefined && chapter.order !== undefined && entry.order !== chapter.order) throw new Error(`章节顺序不一致：${entry.id}。`)
     if (entry.audio && (!chapter.audio?.src || ensureSafeRelativePath(entry.audio) !== ensureSafeRelativePath(chapter.audio.src))) throw new Error(`章节音频路径不一致：${entry.id}。`)

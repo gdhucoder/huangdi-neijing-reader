@@ -29,6 +29,7 @@ export interface ReaderChapter {
   subtitle?: string
   audioUrl?: string
   audioDurationMs?: number
+  audioOffsetMs?: number
   timelineValid: boolean
   segments: ReaderSegment[]
 }

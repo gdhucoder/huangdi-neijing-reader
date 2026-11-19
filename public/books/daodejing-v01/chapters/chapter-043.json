@@ -7,7 +7,8 @@
   "audio": {
     "src": "audio/chapter-043.mp3",
     "duration_ms": 12040,
-    "format": "mp3"
+    "format": "mp3",
+    "offset_ms": 989624
   },
   "segments": [
     {

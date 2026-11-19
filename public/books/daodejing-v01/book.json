@@ -9,7 +9,10 @@
   "subtitle": "老子 · 原文 · 注音 · 朗读",
   "description": "《道德经》八十一章，配有注音、朗读与白话解释。",
   "audio": {
-    "format": "mp3"
+    "format": "mp3",
+    "mode": "continuous",
+    "src": "audio/daodejing-continuous.mp3",
+    "duration_ms": 1842386
   },
   "chapters": [
     {

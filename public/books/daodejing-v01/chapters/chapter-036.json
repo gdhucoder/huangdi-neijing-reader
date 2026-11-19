@@ -7,7 +7,8 @@
   "audio": {
     "src": "audio/chapter-036.mp3",
     "duration_ms": 20260,
-    "format": "mp3"
+    "format": "mp3",
+    "offset_ms": 794673
   },
   "segments": [
     {
